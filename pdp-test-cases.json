@@ -1,0 +1,266 @@
+[
+  {
+    "id": "TC_PDP_001",
+    "desc": "Verify PDP page loads successfully for a valid product URL",
+    "steps": "NAVIGATION: page.goto('https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant?variant_id=45')\n1. Navigate to: https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant?variant_id=45\n2. Wait for page to fully load\n3. Observe page title, product name, price, and images",
+    "expected": "- Page loads without errors (HTTP 200)\n- Product title '18 K ROSE GOLD MIA DIAMOND PENDANT' is visible\n- Product price ₹47,419 is displayed\n- Product images are loaded correctly\n- No 404 or error page is shown"
+  },
+  {
+    "id": "TC_PDP_002",
+    "desc": "Verify product title and SKU are displayed correctly on PDP",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Observe the product heading\n2. Verify SKU number is displayed below the title",
+    "expected": "- Title: '18 K ROSE GOLD MIA DIAMOND PENDANT'\n- SKU: '1120821883027' is visible\n- Title font is prominent and readable"
+  },
+  {
+    "id": "TC_PDP_003",
+    "desc": "Verify product price (MRP) is displayed with 'Inclusive of all taxes' label",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the price section on PDP\n2. Verify price amount and tax label",
+    "expected": "- Price ₹47,419 is prominently displayed\n- Label '(MRP Inclusive of all taxes)' appears below or beside price\n- Price format is correct (₹ symbol + Indian number format)"
+  },
+  {
+    "id": "TC_PDP_004",
+    "desc": "Verify product rating (4.5 stars) is displayed on PDP",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the star rating section near the product title\n2. Verify rating value is visible",
+    "expected": "- Rating '(4.5)' is visible\n- Star icons or numeric rating is displayed\n- Rating is positioned near the product title/SKU"
+  },
+  {
+    "id": "TC_PDP_005",
+    "desc": "Verify breadcrumb navigation is displayed correctly (Home > Product Name)",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the breadcrumb at the top of the page\n2. Verify breadcrumb links and structure",
+    "expected": "- Breadcrumb shows: Home > 18 K Rose Gold Mia Diamond Pendant\n- 'Home' link is clickable and navigates to homepage\n- Product name segment is the current active page"
+  },
+  {
+    "id": "TC_PDP_006",
+    "desc": "Verify product image gallery loads with multiple images",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Observe the product image gallery/slider section\n2. Count available images\n3. Check image quality and loading state",
+    "expected": "- Multiple product images are loaded (31 images expected)\n- Images are clear, not broken, and product-specific\n- Gallery is interactive (carousel/slider navigation visible)"
+  },
+  {
+    "id": "TC_PDP_007",
+    "desc": "Verify product gallery thumbnail navigation works correctly",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the thumbnail strip in the product gallery\n2. Click on a different thumbnail image\n3. Observe the main image change",
+    "expected": "- Clicking a thumbnail updates the main product image\n- Active thumbnail is visually highlighted\n- Image transition is smooth (no errors)"
+  },
+  {
+    "id": "TC_PDP_008",
+    "desc": "Verify Price Breakup toggle expands and shows detailed breakdown",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'Price Breakup' button/toggle on PDP\n2. Click the 'Price Breakup' button\n3. Verify the expanded breakdown details",
+    "expected": "- Price Breakup section expands on click\n- Metal Price: ₹9,372 is visible\n- Diamond Price: ₹33,450 is visible\n- Making Charge: ₹3,215.46 is visible\n- GST (3%): ₹1,381.124 is visible\n- Total: ₹47,419 is visible\n- Disclaimer note about actual weight variation is shown"
+  },
+  {
+    "id": "TC_PDP_009",
+    "desc": "Verify Price Breakup section collapses when toggled again",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Click 'Price Breakup' button to expand\n2. Click 'Price Breakup' button again to collapse\n3. Verify the section is hidden",
+    "expected": "- Price Breakup section collapses on second click\n- Detailed pricing rows are no longer visible\n- Only main price (₹47,419) remains visible"
+  },
+  {
+    "id": "TC_PDP_010",
+    "desc": "Verify Fair Pricing comparison section shows Sunny Diamonds vs Estimated Retail",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'Fair Pricing' section on the PDP\n2. Observe the price comparison",
+    "expected": "- 'Fair Pricing' label or 'Learn More' link is visible\n- Sunny Diamonds price: ₹47,419 is shown\n- Estimated Retail price: ₹52,160 is shown\n- Comparison visually demonstrates savings"
+  },
+  {
+    "id": "TC_PDP_011",
+    "desc": "Verify default quantity is 1 and increment button works correctly",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the Quantity section on PDP\n2. Verify default quantity value is '1'\n3. Click the '+' (increment) button\n4. Observe the quantity value",
+    "expected": "- Default quantity is 1\n- Clicking '+' increments quantity to 2\n- Quantity field updates correctly\n- No page reload occurs"
+  },
+  {
+    "id": "TC_PDP_012",
+    "desc": "Verify quantity decrement button reduces quantity by 1",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. First increment quantity to 3 by clicking '+' twice\n2. Click the '-' (decrement) button\n3. Observe quantity value",
+    "expected": "- Quantity decreases from 3 to 2 on click\n- Decrement works correctly\n- Quantity field displays updated value"
+  },
+  {
+    "id": "TC_PDP_013",
+    "desc": "Verify 'Check Availability' section accepts valid pincode and returns result",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'Check availability' section on PDP\n2. Click on the pincode input field\n3. Enter a valid 6-digit pincode: '682035'\n4. Click the check/submit button\n5. Observe the availability result",
+    "expected": "- Pincode input accepts 6-digit numeric value\n- On submit, delivery availability result is displayed\n- Result shows estimated delivery date or availability message\n- No error is thrown for valid pincode"
+  },
+  {
+    "id": "TC_PDP_014",
+    "desc": "Verify 'Metal Details' accordion expands and shows product metal specifications",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'METAL DETAILS' accordion button on PDP\n2. Click to expand the Metal Details section\n3. Verify the displayed metal information",
+    "expected": "- Metal Details section expands\n- Metal Weight: 1 (gm) is displayed\n- Setting Type: OPEN is displayed\n- Metal Purity: 18K is displayed\n- Metal Type: GOLD is displayed\n- Metal Color: ROSE GOLD is displayed"
+  },
+  {
+    "id": "TC_PDP_015",
+    "desc": "Verify 'Diamond Details' accordion expands and shows diamond specifications",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'DIAMOND DETAILS' accordion button on PDP\n2. Click to expand the Diamond Details section\n3. Verify the displayed diamond information",
+    "expected": "- Diamond Details section expands\n- Diamond specifications (cut, weight, clarity, etc.) are displayed\n- Diamond Price ₹33,450 referenced information is shown\n- Section layout is readable and properly formatted"
+  },
+  {
+    "id": "TC_PDP_016",
+    "desc": "Verify 'Manufactured By' accordion expands and shows manufacturer details",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'MANUFACTURED BY' accordion button on PDP\n2. Click to expand the Manufactured By section\n3. Verify the manufacturer information",
+    "expected": "- Manufactured By section expands\n- Manufacturer details are displayed\n- Section collapses when clicked again"
+  },
+  {
+    "id": "TC_PDP_017",
+    "desc": "Verify 'Add to Cart' button is visible and clickable on PDP",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'ADD TO CART' button (primary CTA) on PDP\n2. Verify button is visible and enabled\n3. Observe button styling and placement",
+    "expected": "- 'ADD TO CART' button is prominently displayed\n- Button is enabled (not disabled/greyed out)\n- Button style matches brand design (secondary button style)\n- Both sticky header and product section CTAs are present"
+  },
+  {
+    "id": "TC_PDP_018",
+    "desc": "Verify clicking 'Add to Cart' as guest user triggers login redirect or adds to cart",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Ensure user is NOT logged in\n2. Locate the 'ADD TO CART' button\n3. Click the 'ADD TO CART' button\n4. Observe the behavior (redirect to login OR cart update)",
+    "expected": "- Either: User is redirected to login page with a redirect-back URL\n- Or: Item is added to guest cart and cart count updates\n- No unhandled error or blank screen occurs\n- Appropriate feedback (toast/modal) is shown to the user"
+  },
+  {
+    "id": "TC_PDP_019",
+    "desc": "Verify 'Buy Now' button is visible and clickable on PDP",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'BUY NOW' button on PDP\n2. Verify button is visible and enabled\n3. Observe button placement relative to Add to Cart",
+    "expected": "- 'BUY NOW' button is visible\n- Button is enabled and clickable\n- Button is positioned alongside the ADD TO CART button\n- Visual differentiation between BUY NOW and ADD TO CART is clear"
+  },
+  {
+    "id": "TC_PDP_020",
+    "desc": "Verify clicking 'Buy Now' as guest redirects to login or initiates checkout",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Ensure user is NOT logged in\n2. Click the 'BUY NOW' button on PDP\n3. Observe the resulting action",
+    "expected": "- User is redirected to login page (if authentication required)\n- OR: Checkout flow is initiated\n- No JavaScript errors or blank screen\n- User is not stuck or confused by the outcome"
+  },
+  {
+    "id": "TC_PDP_021",
+    "desc": "Verify 'You May Also Like' section displays related product recommendations",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Scroll down to the 'YOU MAY ALSO LIKE' section\n2. Observe the recommended products displayed",
+    "expected": "- 'YOU MAY ALSO LIKE' heading is visible\n- At least 10 related products are displayed\n- Each product shows: image, name, price\n- Each product has an 'ADD TO CART' button"
+  },
+  {
+    "id": "TC_PDP_022",
+    "desc": "Verify clicking a related product in 'You May Also Like' navigates to its PDP",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Scroll to the 'YOU MAY ALSO LIKE' section\n2. Click on the product name or image of 'Amaury Diamond Earring'\n3. Observe navigation",
+    "expected": "- User is navigated to the PDP of 'Amaury Diamond Earring' (₹33,726)\n- New PDP loads correctly with correct product details\n- URL updates to reflect the new product slug"
+  },
+  {
+    "id": "TC_PDP_023",
+    "desc": "Verify Social Share section is visible on PDP",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'Social Share' section on PDP\n2. Verify share options are displayed",
+    "expected": "- 'Social Share' / 'Share this link via' text is visible\n- At least one sharing option is displayed (Facebook, WhatsApp, copy link, etc.)\n- Share section is interactive"
+  },
+  {
+    "id": "TC_PDP_024",
+    "desc": "Verify 'Our Promise' trust badges are displayed below product details",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Scroll below the 'You May Also Like' section\n2. Locate the 'PURE. CERTIFIED. TRUSTED.' section\n3. Verify all trust badges are visible",
+    "expected": "- 'PURE. CERTIFIED. TRUSTED.' heading is visible\n- 8 trust badges displayed:\n  • Internally Flawless Diamonds\n  • 100% Money Back on Diamond Value\n  • Certifications of Diamonds\n  • BIS Hall Mark for Jewellery\n  • Brand Assured Quality\n  • 15 Days Return Policy\n  • Cash On Delivery\n  • Pan India Fre"
+  },
+  {
+    "id": "TC_PDP_025",
+    "desc": "Verify newsletter subscription with a valid email address",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Scroll to the footer newsletter section\n2. Locate the email input field with placeholder 'Your email *'\n3. Enter a valid email: 'testuser@example.com'\n4. Click the 'SUBSCRIBE' button\n5. Observe the response",
+    "expected": "- Email input accepts the valid email address\n- On SUBSCRIBE click, a success message is displayed\n- Message such as 'Thank you for subscribing!' or similar\n- No server error occurs"
+  },
+  {
+    "id": "TC_PDP_026",
+    "desc": "Verify clicking 'Home' breadcrumb navigates back to the homepage",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the breadcrumb at the top of the PDP\n2. Click the 'Home' link in the breadcrumb\n3. Observe navigation",
+    "expected": "- User is navigated to the homepage: https://qa-sunnydiamonds.webc.in/\n- Homepage loads correctly\n- URL changes to the root URL"
+  },
+  {
+    "id": "TC_PDP_027",
+    "desc": "Verify Cookie Consent banner appears and 'Accept All' button works",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Open PDP in a fresh browser session (clear cookies first)\n2. Observe the cookie consent banner\n3. Click 'Accept All'\n4. Verify banner disappears",
+    "expected": "- Cookie consent banner: 'We Value Your Privacy' is visible on first visit\n- 'Accept All' and 'Decline' buttons are present\n- Clicking 'Accept All' dismisses the banner\n- Cookie preference is saved (banner not shown on next visit)"
+  },
+  {
+    "id": "TC_PDP_028",
+    "desc": "Verify clicking 'Decline' on cookie consent dismisses the banner",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Open PDP in a fresh browser session\n2. When cookie consent banner appears, click 'Decline'\n3. Observe banner behavior",
+    "expected": "- Banner is dismissed after clicking 'Decline'\n- Non-essential cookies are not set\n- Page remains functional after declining"
+  },
+  {
+    "id": "TC_PDP_029",
+    "desc": "Verify error message when invalid pincode (less than 6 digits) is entered",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the 'Check availability' pincode input\n2. Enter an invalid pincode with only 4 digits: '6820'\n3. Click the check button\n4. Observe the error handling",
+    "expected": "- System shows validation error: 'Please enter a valid 6-digit pincode'\n- OR: check button is disabled until 6 digits are entered\n- No server call is made for incomplete input\n- Pincode field is highlighted in red"
+  },
+  {
+    "id": "TC_PDP_030",
+    "desc": "Verify error when non-numeric (alphabetic) value is entered in pincode field",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the pincode input field\n2. Enter alphabetic characters: 'ABCDEF'\n3. Click the check button",
+    "expected": "- Input field rejects or ignores non-numeric characters\n- OR: Validation error 'Please enter a valid numeric pincode' is shown\n- System does not crash or show unhandled error"
+  },
+  {
+    "id": "TC_PDP_031",
+    "desc": "Verify error when an unserviceable/unavailable pincode is submitted",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Enter a valid-format but unserviceable pincode: '110001' (New Delhi)\n2. Click the check availability button\n3. Observe the response message",
+    "expected": "- System shows a meaningful 'Delivery not available' message\n- OR: Message like 'Sorry, we do not deliver to this pincode'\n- No JavaScript error is thrown\n- User is not left with a blank/loading state"
+  },
+  {
+    "id": "TC_PDP_032",
+    "desc": "Verify quantity field rejects 0 or negative values",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the quantity input field (min=1)\n2. Manually type '0' in the quantity field\n3. Click 'ADD TO CART'\n4. Observe the behavior",
+    "expected": "- System prevents quantity 0: field resets to 1 or shows validation error\n- OR: ADD TO CART is disabled when quantity is 0\n- Negative quantity is not accepted\n- No product with quantity 0 is added to cart"
+  },
+  {
+    "id": "TC_PDP_033",
+    "desc": "Verify newsletter subscription rejects an invalid email format",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Scroll to the footer newsletter section\n2. Enter invalid email: 'notanemail'\n3. Click 'SUBSCRIBE'\n4. Observe validation behavior",
+    "expected": "- System displays validation error: 'Please enter a valid email address'\n- OR: HTML5 email validation prevents form submission\n- Subscription is NOT processed for invalid email\n- Error message is clearly visible to the user"
+  },
+  {
+    "id": "TC_PDP_034",
+    "desc": "Verify PDP behavior when accessed with an invalid variant_id in URL",
+    "steps": "NAVIGATION: page.goto('https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant?variant_id=99999')\n1. Navigate to PDP URL with non-existent variant_id=99999\n2. Observe the page response",
+    "expected": "- Page handles the invalid variant gracefully\n- Either: Default variant is shown\n- Or: Appropriate 'Variant not found' message is displayed\n- Application does NOT crash or show a 500 error"
+  },
+  {
+    "id": "TC_PDP_035",
+    "desc": "Verify quantity field boundary — maximum allowed integer value",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Locate the quantity input field\n2. Clear the field and type an extremely large number: '9999999'\n3. Click 'ADD TO CART'\n4. Observe the system response",
+    "expected": "- System either accepts large quantity or shows max-order limit warning\n- No JavaScript runtime error\n- If limit exists, error message 'Maximum quantity allowed is X' is shown\n- Price is not incorrectly calculated for extreme values"
+  },
+  {
+    "id": "TC_PDP_036",
+    "desc": "Verify quantity accepts exactly 1 (minimum boundary value) — BVA",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Set quantity input to exactly '1' (minimum value)\n2. Click 'ADD TO CART'\n3. Observe behavior",
+    "expected": "- Quantity 1 is accepted\n- ADD TO CART proceeds without validation error\n- Item is added to cart with quantity 1"
+  },
+  {
+    "id": "TC_PDP_037",
+    "desc": "Verify PDP loads correctly on mobile viewport (375×812 — iPhone SE)",
+    "steps": "NAVIGATION: page.setViewportSize({width: 375, height: 812}), then page.goto('https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant?variant_id=45')\n1. Set viewport to 375x812 (mobile)\n2. Navigate to PDP URL\n3. Observe responsive layout",
+    "expected": "- Page is fully responsive on mobile viewport\n- Product title, price, and CTA buttons are visible without horizontal scroll\n- Images resize correctly\n- Mobile sticky navbar (Home, Profile, Cart, Search) is visible\n- ADD TO CART and BUY NOW buttons are accessible"
+  },
+  {
+    "id": "TC_PDP_038",
+    "desc": "Verify PDP loads on tablet viewport (768×1024 — iPad)",
+    "steps": "NAVIGATION: page.setViewportSize({width: 768, height: 1024}), then page.goto('https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant?variant_id=45')\n1. Set viewport to 768×1024 (tablet)\n2. Navigate to PDP\n3. Observe layout adaptation",
+    "expected": "- Page adapts to tablet layout without overflow\n- Product image and details are side-by-side or stacked appropriately\n- All CTAs, accordions, and sections remain accessible"
+  },
+  {
+    "id": "TC_PDP_039",
+    "desc": "Verify PDP URL with no variant_id parameter loads default product variant",
+    "steps": "NAVIGATION: page.goto('https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant')\n1. Navigate to PDP URL without any variant_id query parameter\n2. Observe the product loaded",
+    "expected": "- Page loads without error\n- Default product variant is displayed\n- Product title and price are shown\n- No 404 or unhandled error page"
+  },
+  {
+    "id": "TC_PDP_040",
+    "desc": "Verify pincode field accepts exactly 6-digit numeric input (BVA — boundary)",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Enter exactly 6-digit pincode: '682035'\n2. Click check availability\n3. Then clear and enter 7-digit: '6820350'\n4. Click check availability again",
+    "expected": "- 6-digit pincode: check proceeds without validation error\n- 7-digit pincode: validation error 'Enter a valid 6-digit pincode'\n- OR: Input is limited to 6 characters maximum via maxLength attribute"
+  },
+  {
+    "id": "TC_PDP_041",
+    "desc": "Verify XSS injection attempt in pincode field is sanitised — Security",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Click the pincode input field\n2. Enter XSS payload: '<script>alert(1)</script>'\n3. Click check availability button\n4. Observe page behavior",
+    "expected": "- XSS script is NOT executed in the browser\n- No JavaScript alert popup appears\n- Input is sanitised/escaped by the application\n- Error message for invalid pincode format is shown"
+  },
+  {
+    "id": "TC_PDP_042",
+    "desc": "Verify newsletter email field rejects XSS payload — Security",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Scroll to newsletter subscribe section\n2. Enter XSS payload in email field: '<img src=x onerror=alert(1)>'\n3. Click SUBSCRIBE\n4. Observe page behavior",
+    "expected": "- XSS script is NOT executed\n- HTML tags are sanitised/stripped\n- Validation error is shown for invalid email format\n- No alert popup or DOM manipulation occurs"
+  },
+  {
+    "id": "TC_PDP_043",
+    "desc": "Verify browser back/forward navigation preserves PDP state correctly",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Open PDP via direct URL\n2. Expand 'Price Breakup' section\n3. Navigate to a related product in 'You May Also Like'\n4. Click browser Back button\n5. Observe original PDP state",
+    "expected": "- Browser navigates back to original PDP\n- Product title and price are retained\n- Page loads without errors on back navigation\n- No infinite loop or navigation error"
+  },
+  {
+    "id": "TC_PDP_044",
+    "desc": "Login with valid credentials and verify Add to Cart on PDP works with authenticated session",
+    "steps": "NAVIGATION: page.goBack()  [use goto() as fallback if goBack() fails]\n1. Navigate to https://qa-sunnydiamonds.webc.in/login\n2. Enter Email: 'sreejith.s+4@webandcrafts.com'\n3. Enter Password: 'Password'\n4. Click the Sign In / Login button\n5. Verify successful login (redirect away from login page)\n6. ",
+    "expected": "- Login is successful (user is redirected to homepage or dashboard)\n- PDP loads correctly for the authenticated user\n- 'ADD TO CART' click adds the product to cart\n- Cart icon/count updates to reflect the added item\n- Success toast/notification: 'Item added to cart' (or similar) is shown\n- No authen"
+  }
+]

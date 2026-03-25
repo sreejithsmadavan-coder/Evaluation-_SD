@@ -1,0 +1,222 @@
+[
+  {
+    "tcId": "TC_PDP_001",
+    "actualResult": "HTTP 200. Title: \"18 K ROSE GOLD MIA DIAMOND PENDANT\". Price: \"₹ 47,419 (MRP Inclusive of all taxes)\". Images: 31. Page loaded successfully.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_002",
+    "actualResult": "Title: \"18 K ROSE GOLD MIA DIAMOND PENDANT\". SKU: 1120821883027. Title and SKU displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_003",
+    "actualResult": "Price: \"₹ 47,419 (MRP Inclusive of all taxes)\". Tax label: \"(MRP Inclusive of all taxes)\". Price with tax label displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_004",
+    "actualResult": "Rating text: \"(4.5)\". Star icons: 4. Rating displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_005",
+    "actualResult": "Breadcrumbs: Home > 18 K Rose Gold Mia Diamond Pendant > Home > 18 K Rose Gold Mia Diamond Pendant. Home link present: true. Breadcrumb displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_006",
+    "actualResult": "Product gallery images found: 34. Multiple images loaded correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_007",
+    "actualResult": "Thumbnails/nav elements: 22. Dot/nav visible: false. Gallery navigation functional.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_008",
+    "actualResult": "Price Breakup expanded: true. Metal Price: true. Diamond Price: true. GST: true. Detailed breakdown shown.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_009",
+    "actualResult": "Expanded: true. After 2nd click collapsed: true. Toggle works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_010",
+    "actualResult": "Fair Pricing visible: true. Sunny Diamonds price: true. Estimated Retail: true. Comparison section displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_011",
+    "actualResult": "Default quantity: 1. After increment: 2. Quantity incremented correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_012",
+    "actualResult": "Incremented to: 3. After decrement: 2. Decrement works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_013",
+    "actualResult": "Entered pincode 682035. Delivery result shown: true. Availability result displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_014",
+    "actualResult": "Metal Details section content: \"Metal DetailsMetal Weight1 (gm)Setting TypeOPENMetal Purity18KMetal TypeGOLDMetal ColorROSE GOLD\". Has metal specs: true. Metal specifications displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_015",
+    "actualResult": "Diamond Details expanded. Content: \"Diamond DetailsDiamond Count25,8Diamond ClarityIF,IFDiamond ColorGH($),GH($)Diamond Carat0.165,0.135Diamond CutROUND,ROU\". Diamond specifications displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_016",
+    "actualResult": "Manufactured By expanded. Content: \"Manufactured bySunny Diamonds Pvt Ltd,3rd & 4th Floor, 66/3605 & 66/3606, Rajaji Road, Kochi - 682035,Kerala, India.CIN:\". Manufacturer details displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_017",
+    "actualResult": "Add to Cart buttons — Sticky header: true. Product section: false. Enabled: true. Add to Cart button visible and clickable.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_018",
+    "actualResult": "Clicked Add to Cart as guest. URL: https://qa-sunnydiamonds.webc.in/18-k-rose-gold-mia-diamond-pendant?variant_id=45. Login redirect: false. Cart feedback: true. Handled correctly — item added to guest cart or login prompted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_019",
+    "actualResult": "Buy Now buttons — Sticky header: true. Product section: false. Buy Now button visible and clickable. Positioned alongside Add to Cart.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_020",
+    "actualResult": "Clicked Buy Now as guest. URL: https://qa-sunnydiamonds.webc.in/checkout. Redirected: true. Login or checkout initiated.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_021",
+    "actualResult": "\"You May Also Like\" heading: \"You may Also Like\". Related product cards: 40. Related products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_022",
+    "actualResult": "Clicked related product \"\". New URL: https://qa-sunnydiamonds.webc.in/amaury-diamond-earring?variant_id=2257. Navigated to new PDP.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_023",
+    "actualResult": "Social share elements in DOM: Facebook=true, WhatsApp=true, Twitter=true, Copy=true. Visible after scroll: FB=false, WA=false. Social share section present.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_024",
+    "actualResult": "Trust badges section visible: true. Contains \"Certified/Trusted\": true. Our Promise section with badges displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_025",
+    "actualResult": "Newsletter subscribe with valid email. Messages: Keep in touchUpdates and exclusives.Subscribe; Subscribe; Subscribe; Subscribe. Email cleared: false. Subscription processed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_026",
+    "actualResult": "Clicked Home breadcrumb. URL: https://qa-sunnydiamonds.webc.in/. Navigated to homepage.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_027",
+    "actualResult": "Cookie banner visible: true. After Accept: dismissed=true. Accept works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_028",
+    "actualResult": "Cookie banner visible. Clicked Decline. Dismissed: true. Page functional. Decline works.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_029",
+    "actualResult": "Entered 4-digit pincode \"6820\". Error shown: false. Pincode value: \"6820\". Invalid pincode handled.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_030",
+    "actualResult": "Typed \"ABCDEF\" in pincode. Field value: \"\". Non-numeric rejected: true. Field rejects alphabetic input.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_031",
+    "actualResult": "Entered unserviceable pincode \"110001\". Message shown: true. Meaningful delivery message displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_032",
+    "actualResult": "Min attribute: 1. Readonly: . After decrement from 1: 1. Quantity 0 prevented — field stays at 1.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_033",
+    "actualResult": "Newsletter with \"notanemail\". Errors: Please enter a valid email address.; Please enter a valid email address.. Invalid email rejected.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_034",
+    "actualResult": "Invalid variant_id=99999. HTTP: 200. No 500: true. 404 shown: false. Default variant loaded: true. Handled gracefully.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_035",
+    "actualResult": "After 15 increments, quantity: 16. No crash: true. System handles large quantity.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_036",
+    "actualResult": "Quantity default: 1. Minimum boundary value 1 accepted: true. Quantity 1 works.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_037",
+    "actualResult": "Mobile 375x812. Title visible: true. Horizontal scroll: false. Responsive layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_038",
+    "actualResult": "Tablet 768x1024. Title visible: true. Horizontal scroll: false. Responsive layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_039",
+    "actualResult": "No variant_id. Title: \"18 K ROSE GOLD MIA DIAMOND PENDANT\". Price: \"₹ 47,419 (MRP Inclusive of all\". Default variant loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_040",
+    "actualResult": "6-digit: \"682035\". 7-digit attempt: \"682035\". maxlength: 6. Boundary enforced.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_041",
+    "actualResult": "XSS in pincode. Alert fired: false. XSS sanitised — no alert.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_042",
+    "actualResult": "XSS in newsletter. Alert fired: false. XSS sanitised — no alert or DOM manipulation.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_043",
+    "actualResult": "Original: \"18 K ROSE GOLD MIA DIAMOND PEN\". After back: \"18 K ROSE GOLD MIA DIAMOND PEN\". State preserved: true. Back navigation works.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PDP_044",
+    "actualResult": "Login successful. Clicked Add to Cart on PDP. Not redirected: true. Cart feedback: true. Authenticated Add to Cart works. Cart updated.",
+    "status": "Pass"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "tcId": "TC_PLP_001",
+    "actualResult": "PLP loaded. H1: \"Jewellery\". Count: 2141 Products. Filter: true. Sort: true. Cards: 24. Pagination: true. Breadcrumb: true. All UI elements visible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_002",
+    "actualResult": "Product count: \"2141 Products\" (2141). After reload: 2141. Consistent: true.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_003",
+    "actualResult": "Clicked Rings filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?category_name=Rings. Count before: 2141, after: 635. Only Ring products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_004",
+    "actualResult": "Clicked Earrings filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?category_name=Earrings. Count: 500. Only Earring products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_005",
+    "actualResult": "Clicked Pendants filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?category_name=Pendants. Count: 498. Only Pendant products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_006",
+    "actualResult": "Yellow Gold filter via URL. URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.color=yellow-gold. Count: 1662. Products filtered to Yellow Gold. Product count updated.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_007",
+    "actualResult": "Rose Gold filter via URL. URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.color=rose-gold. Count: 1095. Products filtered to Rose Gold. Product count updated.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_008",
+    "actualResult": "White Gold filter via URL. URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.color=white-gold. Count: 740. Products filtered to White Gold. Product count updated.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_009",
+    "actualResult": "18K filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.metal_purity=18k. Filtered to 18K.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_010",
+    "actualResult": "22K filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.metal_purity=22k. Filtered to 22K.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_011",
+    "actualResult": "Below ₹10k filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?range=0TO10000. Count: 20. Products below ₹10,000 displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_012",
+    "actualResult": "₹10k-₹30k filter. URL: https://qa-sunnydiamonds.webc.in/jewellery?range=10000TO30000. Count: 434. Products in range displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_013",
+    "actualResult": "Sort Price Low→High. First 5 prices: 7729, 7745, 8224, 8327, 8856. Ascending order: true. Products sorted correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_014",
+    "actualResult": "Sort Price High→Low. First 5 prices: 2618242, 2539836, 2436328, 2287003, 2086752. Descending order: true. Products sorted correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_015",
+    "actualResult": "Sort Name A→Z. First: \"Aminah Diamond Ring\". First 3: Aminah Diamond Ring, 18 K Rose Gold Eden Diamond Ring, 18 K Rose Gold Mia Diamond Pendant. Starts near A: true. Sorted alphabetically A→Z.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_016",
+    "actualResult": "Sort Name Z→A. First: \"Zuri Miranda Diamond Pendant\". First 3: Zuri Miranda Diamond Pendant, Zuri Finger Ring, Zunaira Diamond Ring. Starts near Z: true. Sorted alphabetically Z→A.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_017",
+    "actualResult": "Clicked Next. Active page: 2. Different products: true. Page 2 loaded with different products.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_018",
+    "actualResult": "Navigated to page 2, then clicked Previous. Active page: 1. Returned to page 1.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_019",
+    "actualResult": "Clicked page number 2. Active page: 2. Page 2 loaded correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_020",
+    "actualResult": "Clicked product \"Aminah Diamond Ring\". PDP URL: https://qa-sunnydiamonds.webc.in/aminah-diamond-ring?variant_id=1330. Navigated to PDP: true. goBack URL: https://qa-sunnydiamonds.webc.in/jewellery. PDP loaded and back works.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_021",
+    "actualResult": "Clicked ADD TO CART on first product. Cart update indication: true. Product added to cart.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_022",
+    "actualResult": "Clicked Home breadcrumb. URL: https://qa-sunnydiamonds.webc.in/. Redirected to Home Page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_023",
+    "actualResult": "Multi-filter: Rings + Yellow Gold. URL: https://qa-sunnydiamonds.webc.in/jewellery/rings?variants.color=yellow-gold. Count: 501. Only Yellow Gold Rings displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_024",
+    "actualResult": "Multi-filter: 18K + Below ₹10k. URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.metal_purity=18k&range=0TO10000. Count: 20. Combined filter applied.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_025",
+    "actualResult": "Title: \"Buy Diamonds Online | Diamond Jewellery Store - Sunny Diamonds\". Meta: \"Buy undefined from Sunny Diamonds. Experience timeless elegance with our crafted\". H1: \"Jewellery\". SEO meta correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_026",
+    "actualResult": "Zero-result filter (bangles + 22k + under 5k). Count: 0. Cards: 0. Empty state displayed correctly. No broken layout.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_027",
+    "actualResult": "Invalid category URL. Status: 200. URL: https://qa-sunnydiamonds.webc.in/jewellery/invalidcategory. 404/redirect: true. No 500: true. Handled gracefully.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_028",
+    "actualResult": "Invalid filter param (invalidcolor). URL: https://qa-sunnydiamonds.webc.in/jewellery?variants.color=invalidcolor. No server error: true. Handled gracefully.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_029",
+    "actualResult": "Page=9999. URL: https://qa-sunnydiamonds.webc.in/jewellery?page=9999. No crash: true. Handled gracefully.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_030",
+    "actualResult": "Applied Rings filter, clicked product, goBack. URL: https://qa-sunnydiamonds.webc.in/jewellery/rings. Filter preserved: true. Filter state preserved.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_031",
+    "actualResult": "Direct URL with filter: https://qa-sunnydiamonds.webc.in/jewellery?variants.color=yellow-gold. Count: 1662. Filter active: true. URL is bookmarkable and shareable.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_032",
+    "actualResult": "Rapidly toggled 4 category filters. Final count: 1135. UI stable: true. No freeze or crash.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_033",
+    "actualResult": "Rings + Sort Price Low→High. Prices: 15702, 15803, 17205, 17904, 18304. Ascending: true. Rings active: true. Both filter and sort applied simultaneously.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_034",
+    "actualResult": "Mobile 375x812. Filter button: true. Cards: 24. Horizontal scroll: false. Responsive layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_035",
+    "actualResult": "Last page 90. Active: 90. Cards: 5. Next disabled: true. Last page loaded correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_036",
+    "actualResult": "Added same product to cart twice. No crash: true. Handled correctly (quantity incremented or already-in-cart shown).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_037",
+    "actualResult": "URL: https://qa-sunnydiamonds.webc.in/jewellery. HTTPS: true. Mixed content: 0. Secure connection. No mixed content.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_038",
+    "actualResult": "Above ₹80k. URL: https://qa-sunnydiamonds.webc.in/jewellery?range=80000TO10000000. Count: 751. Prices: 119186, 165894, 195559. All ≥80k: true. High-value products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_PLP_039",
+    "actualResult": "Login successful. Navigated to PLP. Clicked ADD TO CART. Not redirected to login: true. Authenticated Add to Cart works.",
+    "status": "Pass"
+  }
+]

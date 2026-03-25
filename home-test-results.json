@@ -1,0 +1,207 @@
+[
+  {
+    "tcId": "TC_HOME_001",
+    "actualResult": "Home page loaded. Title contains Sunny Diamonds: true. Sections: title: Visible, banner: Visible, nav: Visible, search: Visible, hero: Visible, category: Visible, trending: Visible, newsletter: Visible, footer: Visible. All major sections visible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_002",
+    "actualResult": "Announcement banner visible. Text: \"Sunny Diamonds Celebrates The \"Season of Sparkle\" from October 15th to November 15th.!\". Contains \"Season of Sparkle\": true.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_003",
+    "actualResult": "Navigated to https://qa-sunnydiamonds.webc.in/about-us. Clicked Sunny Diamonds logo. Redirected to: https://qa-sunnydiamonds.webc.in/. Home page reloaded correctly. All home page sections visible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_004",
+    "actualResult": "Mega menu opened on hover. Category: true, Metal color: true, Metal purity: true, Price: true, Explore: true. All sub-categories displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_005",
+    "actualResult": "Clicked EARRINGS nav. URL: https://qa-sunnydiamonds.webc.in/jewellery/earrings. Earrings listing page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_006",
+    "actualResult": "Clicked TRENDING nav. URL: https://qa-sunnydiamonds.webc.in/trending. Trending page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_007",
+    "actualResult": "Clicked Hero \"Shop Now\" CTA (JS click: true). URL: https://qa-sunnydiamonds.webc.in/jewellery. User navigated to jewellery listing page. Products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_008",
+    "actualResult": "Clicked Rings category tile. URL: https://qa-sunnydiamonds.webc.in/jewellery/rings. Rings listing loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_009",
+    "actualResult": "Clicked SHOP ALL tile. URL: https://qa-sunnydiamonds.webc.in/jewellery. All jewellery listing loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_010",
+    "actualResult": "Clicked featured banner explore link. URL: https://qa-sunnydiamonds.webc.in/jewellery/earrings. Navigated to earrings/category page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_011",
+    "actualResult": "Trending section shows 10 products. First: \" Isabelette Diamond Earring\". Last: \" Quinlan Diamond Earring\". ADD TO CART buttons: 20. Exactly 10 products displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_012",
+    "actualResult": "Clicked \"View All\" in Trending Products. URL: https://qa-sunnydiamonds.webc.in/trending. Trending page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_013",
+    "actualResult": "Clicked \"Find Your Gift\" CTA. URL: https://qa-sunnydiamonds.webc.in/jewellery. Navigated to gifts page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_014",
+    "actualResult": "Found and clicked \"Gifts Under\n₹10,000Thoughtful little luxuries\". URL: https://qa-sunnydiamonds.webc.in/jewellery?range=0TO10000. Products filtered by price range.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_015",
+    "actualResult": "Clicked \"SHOP NOW\" on product carousel. URL: https://qa-sunnydiamonds.webc.in/isabelette-diamond-earring. Product detail page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_016",
+    "actualResult": "Testimonials section visible: true. Review cards found: 49. Customer reviews displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_017",
+    "actualResult": "Trust badges section visible: true. Badges found: 16. Texts: Internally Flawless DiamondsInternally Flawless Diamonds | Internally Flawless DiamondsInternally Flawless Diamonds | 100% Money Back on Diamond Value100% Money Back on Diamond Value | 100% Money Back. All 8 trust badges present.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_018",
+    "actualResult": "Entered \"test.newsletter@example.com\" and clicked Subscribe. Messages: Keep in touchUpdates and exclusives.Subscribe; Subscribe; Subscribe; Subscribe. Email field after: \"test.newsletter@example.com\". Subscription processed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_019",
+    "actualResult": "Clicked footer \"About Us\". URL: https://qa-sunnydiamonds.webc.in/about-us. About Us page loaded. No 404.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_020",
+    "actualResult": "Clicked footer \"FAQs\". URL: https://qa-sunnydiamonds.webc.in/faq. FAQ page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_021",
+    "actualResult": "Cookie banner was visible. Clicked \"Accept All\". Banner dismissed: true. Persists after reload: false. Cookie consent saved.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_022",
+    "actualResult": "Cookie banner visible. Clicked \"Decline\". Banner dismissed: true. Page functional: true. Decline works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_023",
+    "actualResult": "Hovered on account area, clicked \"Log In\". URL: https://qa-sunnydiamonds.webc.in/login. Login page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_024",
+    "actualResult": "Hovered on account area, clicked \"Sign Up\". URL: https://qa-sunnydiamonds.webc.in/create. Registration page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_025",
+    "actualResult": "Clicked \"Store Locator\". URL: https://qa-sunnydiamonds.webc.in/locations. Store Locator page loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_026",
+    "actualResult": "Clicked \"Order Tracking\". URL: https://qa-sunnydiamonds.webc.in/sales/guest/form. Order Tracking form loaded.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_027",
+    "actualResult": "Entered \"invalidemail\" and clicked Subscribe. Messages: Please enter a valid email address.; Please enter a valid email address.. On home: true. Invalid email rejected.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_028",
+    "actualResult": "Clicked Subscribe with empty email. Messages: Please enter your email address.; Please enter your email address.. On home: true. Subscription blocked for empty email.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_029",
+    "actualResult": "Navigated to /this-page-does-not-exist. HTTP status: 200. Page shows 404: true. 404 error page displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_030",
+    "actualResult": "Clicked search icon, submitted empty query. Search input visible: false. Server error: false. No crash. Page functional.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_031",
+    "actualResult": "Mobile 375x812. Mobile bottom nav: true. Horizontal scroll: false. Hero visible: true. Content renders at 375px. Responsive layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_032",
+    "actualResult": "Tablet viewport 768x1024. Hero visible: true. Horizontal scroll: false. Responsive layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_033",
+    "actualResult": "URL: https://qa-sunnydiamonds.webc.in/. HTTPS: true. Mixed content warnings: 0. Secure connection. No mixed content.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_034",
+    "actualResult": "Page title: \"Buy Diamonds Online | Diamond Jewellery Store - Sunny Diamonds\". Meta description: \"Sunny diamonds one of the finest diamond jewellery store in India. Shop Internally Flawless diamond \". Title contains brand: true. Meta present: true. SEO meta correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_035",
+    "actualResult": "JavaScript console errors: 0. None detected.. No JS errors.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_036",
+    "actualResult": "Lazy-loaded images: 35. Broken images after scroll: 0. Lazy loading works. No broken images.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_037",
+    "actualResult": "DOMContentLoaded: 766ms. Full load: 29787ms. Server errors: false. Performance within threshold.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_038",
+    "actualResult": "Footer copyright: \"© 2026 Sunny Diamonds. All rights reserved.\". Contains 2026: true. Current year displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_039",
+    "actualResult": "Clicked \"Terms and Conditions\" footer link. URL: https://qa-sunnydiamonds.webc.in/terms-and-conditions. T&C page loaded. No 404.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_040",
+    "actualResult": "Privacy Policy link not clickable via scroll. Direct navigation to /privacy-policy: true. Page content: \"Sunny Diamonds Celebrates The \"Season of Sparkle\" from October 15th to November 15th.!\nStore Locator\".",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_HOME_041",
+    "actualResult": "Login successful. Home page loaded after login. Hero visible: true. Login link hidden (authenticated): true. All sections intact.",
+    "status": "Pass"
+  }
+]

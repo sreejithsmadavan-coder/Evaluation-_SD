@@ -1,0 +1,122 @@
+[
+  {
+    "tcId": "TC_LOGIN_001",
+    "actualResult": "Login page loaded successfully. All UI elements are visible:\n'Welcome Back' heading: Visible (Welcome Back)\nEmail input: Visible\nPassword input: Visible\nEye toggle: Visible\nRemember me checkbox: Visible\nForgot password link: Visible\nSign In button: Visible\nCreate Account link: Visible\nConsole errors: None",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_002",
+    "actualResult": "Password masked by default (type=password). After eye icon click 1: type=text (visible as plain text). After eye icon click 2: type=password (masked again). Toggle works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_003",
+    "actualResult": "Initial state: Unchecked. After clicking to check: Checked (tick visible). After clicking to uncheck: Unchecked (tick removed). Checkbox toggles correctly between checked and unchecked states.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_004",
+    "actualResult": "Clicked 'Forgot password?' link. User redirected to forgot-password page. URL: https://qa-sunnydiamonds.webc.in/forgot-password. Page loaded correctly. No error displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_005",
+    "actualResult": "Clicked 'Create Account' link. User redirected to registration page. URL: https://qa-sunnydiamonds.webc.in/create. Registration page loaded correctly. No error displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_006",
+    "actualResult": "Form NOT submitted with empty fields. Validation errors shown: Enter your email.; Enter your password.. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_007",
+    "actualResult": "Form NOT submitted with empty Email. Validation errors: Enter your email.. Email required error displayed. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_008",
+    "actualResult": "Form NOT submitted with empty Password. Validation errors: Enter your password.. Password required error displayed. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_009",
+    "actualResult": "Form NOT submitted with email 'invalidemail.com' (missing @). Validation errors: Enter a valid email address.. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_010",
+    "actualResult": "Form submitted with email 'user@domain' (no domain extension). Validation errors: Enter a valid email address.. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_011",
+    "actualResult": "Login failed with unregistered email 'notregistered@test.com'. Error message: Invalid email or password. Please try again.. Account details exposed: No. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_012",
+    "actualResult": "Login failed with correct email but wrong password 'WrongPassword123'. Error message: Invalid email or password. Please try again.. User remained on the Login page. Account not locked after single failed attempt.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_013",
+    "actualResult": "Login failed with correct email but password in wrong case ('password' instead of 'Password'). Error message: Invalid email or password. Please try again.. Confirms passwords are case-sensitive. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_014",
+    "actualResult": "Login form submitted with spaces-only password. Errors: Enter your password.. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_015",
+    "actualResult": "SQL injection attempted in email field (\" ' OR '1'='1 \"). Login NOT successful. Errors: Enter a valid email address.. SQL error exposed: No. Database unaffected. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_016",
+    "actualResult": "XSS injection attempted in email field ('<script>alert(\"XSS\")</script>'). JavaScript alert executed: No. Script rendered in DOM: No. Errors: Enter a valid email address.. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_017",
+    "actualResult": "System trimmed whitespace from email and logged in successfully. Email entered with leading/trailing spaces was handled correctly (Option A). User redirected to: https://qa-sunnydiamonds.webc.in/dashboard.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_018",
+    "actualResult": "Submitted email with 259 characters (>254, RFC boundary). Errors: Invalid email or password. Please try again.. Server error (500): No. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_019",
+    "actualResult": "Submitted password with 500+ characters. Login failed gracefully. Errors: Invalid email or password. Please try again.. Server error (500): No. No sensitive information exposed. User remained on the Login page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_020",
+    "actualResult": "Login succeeded with uppercase email 'SREEJITH.S+4@WEBANDCRAFTS.COM'. Email is treated as case-insensitive (Option A — best practice, RFC compliant). User redirected to: https://qa-sunnydiamonds.webc.in/dashboard.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_021",
+    "actualResult": "Page URL: https://qa-sunnydiamonds.webc.in/login. Served over HTTPS: Yes. Padlock icon would be visible: Yes. 'Not Secure' warning: Not displayed. Mixed-content errors: None detected in browser console.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_022",
+    "actualResult": "Double-clicked 'Sign In' button rapidly. Login API requests detected: 25. Button disabled after first click: false. 25 requests sent — potential duplicate submission risk.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_LOGIN_023",
+    "actualResult": "Logged in with 'Remember me' checked. Closed browser tab and reopened. User is still logged in — session persisted. Remember Me works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_LOGIN_024",
+    "actualResult": "Login successful with valid credentials (sreejith.s+4@webandcrafts.com). User redirected to: https://qa-sunnydiamonds.webc.in/dashboard. URL changed from /login. No error message shown.",
+    "status": "Pass"
+  }
+]

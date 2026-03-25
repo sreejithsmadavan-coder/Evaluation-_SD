@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \":*)",
+      "Bash(pip install:*)",
+      "Bash(python3 -m pip install openpyxl)",
+      "Bash(node inspect-dom.js)",
+      "Bash(node inspect-errors.js)",
+      "Bash(node run-tests-and-update-excel.js)",
+      "Bash(node rerun-failed.js)",
+      "Bash(python3 update-excel.py)",
+      "Bash(node -e \":*)",
+      "Bash(node run-login-tests.js)",
+      "Bash(node rerun-login-failed.js)",
+      "Bash(python3 update-login-excel.py)",
+      "Bash(powershell -Command \"Copy-Item -Path ''TestCase/SunnyDiamonds_v2_updated.xlsx'' -Destination ''TestCase/SunnyDiamonds_v2.xlsx'' -Force\")",
+      "Bash(powershell -Command \"Get-Process | Where-Object { $_.MainWindowTitle -like ''*SunnyDiamonds*'' -or $_.Name -like ''*EXCEL*'' } | Select-Object Id, Name, MainWindowTitle\")",
+      "Bash(powershell -Command \"Stop-Process -Id 19668 -Force\")",
+      "Bash(mv -f \"TestCase/SunnyDiamonds_v2_updated.xlsx\" \"TestCase/SunnyDiamonds_v2.xlsx\")",
+      "Bash(node inspect-home.js)",
+      "Bash(node run-home-tests.js)",
+      "Bash(node rerun-home-failed.js)",
+      "Bash(node fix-home-last2.js)",
+      "Bash(python3 update-home-excel.py)",
+      "Bash(powershell -Command \"Get-Process | Where-Object { $_.Name -like ''*wps*'' -or $_.Name -like ''*EXCEL*'' } | Select-Object Id, Name, MainWindowTitle\")",
+      "Bash(powershell -Command \"Stop-Process -Id 18512 -Force\")",
+      "Bash(mv -f \"TestCase/SunnyDiamonds_v2_home_updated.xlsx\" \"TestCase/SunnyDiamonds_v2.xlsx\")",
+      "Bash(node run-plp-tests.js)",
+      "Bash(node rerun-plp-failed.js)"
+    ]
+  }
+}

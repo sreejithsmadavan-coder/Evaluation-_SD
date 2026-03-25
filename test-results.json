@@ -1,0 +1,177 @@
+[
+  {
+    "tcId": "TC_REG_001",
+    "actualResult": "Form submitted but user remained on registration page. Possibly blocked by reCAPTCHA. URL: https://qa-sunnydiamonds.webc.in/create",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_REG_002",
+    "actualResult": "Form submitted but user remained on registration page. Possibly blocked by reCAPTCHA. URL: https://qa-sunnydiamonds.webc.in/create",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_REG_003",
+    "actualResult": "Password masked by default (type=password). Eye icon click 1: type changed to text (visible). Eye icon click 2: type changed back to password (masked). Toggle works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_004",
+    "actualResult": "Confirm Password masked by default (type=password). Eye icon click 1: type changed to text (visible). Eye icon click 2: type changed back to password (masked). Toggle works correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_005",
+    "actualResult": "User successfully redirected to login page. URL: https://qa-sunnydiamonds.webc.in/login. Login page loaded correctly. No error displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_006",
+    "actualResult": "Form was NOT submitted. Validation errors shown: Enter your first name.; Enter your last name.; Enter your email.; Enter your phone number.; Enter a password.; Re-enter your password.; Please accept the terms and conditions.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_007",
+    "actualResult": "Form NOT submitted. First Name validation error: Please lengthen this text to 3 characters or more (you are currently using 2 characters).. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_008",
+    "actualResult": "Form NOT submitted. Email validation error: Please include an '@' in the email address. 'invalidemail.com' is missing an '@'.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_009",
+    "actualResult": "Form submitted but server rejected. Errors: Enter a valid email address.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_010",
+    "actualResult": "Form NOT submitted. Validation error displayed: Passwords do not match.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_011",
+    "actualResult": "Form NOT submitted. Phone value: \"987654\". Errors: Enter a valid phone number.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_012",
+    "actualResult": "Form NOT submitted. Error displayed: \"Email already exists\". Duplicate email (test@test.com) correctly rejected. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_013",
+    "actualResult": "Form NOT submitted. Server errors: Please accept the terms and conditions.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_014",
+    "actualResult": "Phone accepted alphabets but form NOT submitted. Phone value: \"ABCD123456\". Errors: Enter a valid phone number.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_015",
+    "actualResult": "Phone accepted special chars but form NOT submitted. Phone value: \"+91-98765\". Errors: Enter a valid phone number.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_016",
+    "actualResult": "Form NOT submitted without CAPTCHA. User remained on registration page. reCAPTCHA prevented form submission.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_017",
+    "actualResult": "System trimmed leading/trailing spaces from email. Input: \" testuser@mail.com \", Stored value: \"testuser@mail.com\". Form not submitted (reCAPTCHA). Spaces correctly handled — Option A (trim and accept) behavior confirmed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_018",
+    "actualResult": "Form NOT submitted. Whitespace-only First Name rejected. Errors: Enter your first name.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_019",
+    "actualResult": "Form NOT submitted. Spaces-only password rejected. Errors: Enter a password.; Re-enter your password.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_020",
+    "actualResult": "First Name \"Tom\" (3 chars) accepted at boundary. Form not submitted due to reCAPTCHA. No first name validation error shown.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_021",
+    "actualResult": "Form NOT submitted. First Name \"Al\" (2 chars) rejected. Validation: Please lengthen this text to 3 characters or more (you are currently using 2 characters).. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_022",
+    "actualResult": "First Name accepted at 50-char max boundary. Value length: 48. Form not submitted due to reCAPTCHA.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_023",
+    "actualResult": "Field does NOT accept more than 50 characters (maxlength=50). Typed 51 chars, field value length: 50. Input correctly capped at 50 characters.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_024",
+    "actualResult": "Last Name \"D\" (1 char) accepted at minimum boundary. Form not submitted due to reCAPTCHA. No last name error.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_025",
+    "actualResult": "Last Name accepted at 50-char max boundary. Value length: 48. Form not submitted due to reCAPTCHA.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_026",
+    "actualResult": "User on registration page. Phone \"0123456789\". No errors. Possibly blocked by reCAPTCHA.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_027",
+    "actualResult": "Field accepts only first 10 digits. Typed 11 digits (\"98765432101\"), field value: \"9876543210\" (length=10). maxlength=10 enforced correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_028",
+    "actualResult": "Form NOT submitted. First Name \"@#$%^&\" (special chars) rejected. Errors: Use letters only.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_029",
+    "actualResult": "Form NOT submitted. First Name \"12345\" (numeric only) rejected. Errors: Use letters only.. User remained on registration page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_030",
+    "actualResult": "No JavaScript alert executed. Input was rejected. First Name value: \"<script>alert(\"XSS\")</script>\". Errors: Use letters only.. XSS prevented.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_031",
+    "actualResult": "Form NOT submitted. SQL injection string rejected by email validation: A part following '@' should not contain the symbol '''.. No SQL query executed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_032",
+    "actualResult": "10 API calls detected on double-click. Button disabled: true. Potential duplicate submission risk.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_REG_033",
+    "actualResult": "Email with + alias accepted (no email validation error). Form not submitted due to reCAPTCHA.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_034",
+    "actualResult": "All form data retained after scrolling. First Name: \"Alice\", Last Name: \"Brown\", Email: \"alice@test.com\". No data loss on scroll.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_REG_035",
+    "actualResult": "Page served over HTTPS (secure). URL: https://qa-sunnydiamonds.webc.in/create. No mixed-content warnings detected. Padlock icon would be visible. Connection is secure.",
+    "status": "Pass"
+  }
+]

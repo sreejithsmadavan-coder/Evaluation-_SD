@@ -1,0 +1,24 @@
+{
+  "name": "evaluation_sunnydimonds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/main.spec.js",
+    "test:registration": "npx playwright test tests/registration/",
+    "test:login": "npx playwright test tests/login/",
+    "test:home": "npx playwright test tests/home/",
+    "test:plp": "npx playwright test tests/plp/",
+    "test:cart": "npx playwright test tests/cart/",
+    "test:headed": "npx playwright test tests/main.spec.js --headed",
+    "test:debug": "npx playwright test tests/main.spec.js --debug",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
