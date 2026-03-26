@@ -1,0 +1,19 @@
+{
+  "eval_id": 1,
+  "eval_name": "login-page-tcs",
+  "prompt": "Use UltraThink mode and act as a Senior QA Lead. Generate comprehensive test cases for the login page at https://qa-sunnydiamonds.webc.in/login. Include positive, negative, and edge case scenarios. Apply BVA and Equivalence Partitioning. Cover OWASP XSS and SQL injection. The valid login test case must be LAST — use Email: sreejith.s+4@webandcrafts.com / Password: Password. Save to a NEW Excel file at C:\\QA\\LoginTests.xlsx in a sheet named 'Login Page'. Created By: Manu Mohan. Today's date.",
+  "assertions": [
+    "A Python script is generated and executed to create the Excel file",
+    "The Excel file has a sheet named 'Login Page'",
+    "At least 15 test cases are generated",
+    "Test cases include Positive, Negative, and Edge Case types",
+    "The valid login test case (sreejith.s+4@webandcrafts.com) is the LAST test case",
+    "At least one XSS test case is included",
+    "At least one SQL injection test case is included",
+    "The first TC step navigates to the full URL",
+    "Subsequent TC step 1 uses 'Navigate back' instead of full navigation",
+    "Common preconditions (browser open, app accessible) are in a header row, NOT repeated per TC",
+    "The script uses colour-coding: green for Positive, pink/red for Negative, yellow for Edge Case",
+    "Created By field is set to 'Manu Mohan'"
+  ]
+}

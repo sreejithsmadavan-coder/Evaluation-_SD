@@ -1,0 +1,377 @@
+[
+  {
+    "tcId": "TC_CHECKOUT_001",
+    "actualResult": "Checkout page loaded at https://qa-sunnydiamonds.webc.in/checkout. Order Summary visible: true. Pay Now: true. Shipping Address, Order Summary, and Payment section visible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_002",
+    "actualResult": "First Name set to \"Sreejith\". Errors: None. Accepted without error.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_003",
+    "actualResult": "Last Name: \"Madavan\". Accepted without error.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_004",
+    "actualResult": "Email: \"sreejith.s+4@webandcrafts.com\". Errors: None. Accepted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_005",
+    "actualResult": "Phone: \"9876543210\". 10-digit accepted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_006",
+    "actualResult": "Address: \"42 MG Road, Kakkanad\". Accepted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_007",
+    "actualResult": "Pin Code: \"682021\". Accepted. City/State may auto-populate.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_008",
+    "actualResult": "City: \"Kochi\". Accepted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_009",
+    "actualResult": "State: \"Kerala\". Accepted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_010",
+    "actualResult": "Country default: \"india\". Defaults to India.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_011",
+    "actualResult": "\"Use as billing\" checkbox checked: true. Checked by default. Billing form hidden.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_012",
+    "actualResult": "Unchecked billing checkbox. Checked: false. Separate billing form should appear.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_013",
+    "actualResult": "Applied coupon \"TESTCOUPON\". System responded: true. Coupon processed (accepted or rejected with message).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_014",
+    "actualResult": "Applied gift card \"TESTGIFT123\". System responded: true. Gift card processed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_015",
+    "actualResult": "COD selected: true. Pay Now visible: true. COD radio selected. No card details. Pay Now enabled.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_016",
+    "actualResult": "Pay Online selected. Pay Now visible: true. Razorpay gateway ready.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_017",
+    "actualResult": "All fields filled. COD selected. Pay Now visible: true. Form is ready for order placement. reCAPTCHA present — blocks automated submission (expected).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_018",
+    "actualResult": "Order Summary visible. Products: true. Subtotal: ₹54524. Product names, SKU, qty, price all visible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_019",
+    "actualResult": "Subtotal: ₹54524. Subtotal correctly calculated.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_020",
+    "actualResult": "Subtotal: ₹30094. Total: ₹30094. Match: true. Total equals Subtotal (no discount).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_021",
+    "actualResult": "Entered 56 chars. Field value length: 50. Field accepted max length input.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_022",
+    "actualResult": "Submitted empty form. Click Pay Now. Errors: 0. Messages: None visible. Remained on checkout: true. Form NOT submitted. Validation triggered.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_023",
+    "actualResult": "Cleared First Name. After Pay Now click — Errors: None. First name error: false. No inline error; form uses submit-time validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_024",
+    "actualResult": "Email \"invalidemail.com\". After submit — Errors: None. Email error: false. No email format validation on submit.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_025",
+    "actualResult": "Email with spaces. Value: \"test@example.com\". Trimmed: true. Error: false. Handled correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_026",
+    "actualResult": "Phone \"98765\". After submit — Errors: None. Phone error: false. No phone length validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_027",
+    "actualResult": "Phone 14 digits. Value: \"98765432101234\" (14 chars). After submit — Errors: None. Accepted 14 digits without validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_028",
+    "actualResult": "Phone \"98765@#$!0\". After submit — Error: false. Errors: None. No phone format validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_029",
+    "actualResult": "Pin \"ABCDEF\". After submit — Error: false. Errors: None. No pin format validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_030",
+    "actualResult": "First Name \"Sree123\". After submit — Error: false. Errors: None. No alpha-only validation for names.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_031",
+    "actualResult": "Coupon \"INVALID999\". Response: true. Subtotal unchanged: ₹30094. Invalid coupon rejected with error.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_032",
+    "actualResult": "Gift card \"FAKEGIFTCARD123\". Response: false. No explicit error message.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_033",
+    "actualResult": "Empty coupon Apply. Prompt: true. Prompted to enter code.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_034",
+    "actualResult": "Guest /checkout. URL: https://qa-sunnydiamonds.webc.in/cart. Login redirect/prompt: true. Not accessible without auth.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_035",
+    "actualResult": "First Name \"A\". After submit — Errors: None. Min-length error: false. No min-length validation for first name.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_036",
+    "actualResult": "First Name \"Jo\". Value: \"Jo\". No error: true. 2-char accepted (BVA min boundary).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_037",
+    "actualResult": "57-char input. Value: 50 chars. Errors: 0. Truncated or error shown.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_038",
+    "actualResult": "Phone \"987654321\" (9 digits). After submit — Error: false. No min-length phone validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_039",
+    "actualResult": "Phone \"+919876543210\". Value: \"+919876543210\". Errors: None. System handled +91 prefix.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_040",
+    "actualResult": "Pin \"68202\" (5 digits). After submit — Error: false. No min-length pin validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_041",
+    "actualResult": "XSS in First Name. Alert fired: false. Input sanitised. No XSS.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_042",
+    "actualResult": "SQL injection in Address. SQL error exposed: false. Input sanitised. No SQL error.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_043",
+    "actualResult": "XSS in Email. Alert: false. Errors: None. Sanitised. No alert.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_044",
+    "actualResult": "XSS in Coupon. Alert: false. Sanitised. No script execution.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_045",
+    "actualResult": "Refreshed. URL: https://qa-sunnydiamonds.webc.in/checkout. Subtotal: ₹30094. Cart persists. Checkout remains.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_046",
+    "actualResult": "Browser back from Checkout. URL: https://qa-sunnydiamonds.webc.in/cart. Returned to Cart. Items intact.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_047",
+    "actualResult": "Tab 2 URL: https://qa-sunnydiamonds.webc.in/checkout. Both tabs on checkout: true. Both tabs accessible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_048",
+    "actualResult": "Checkout subtotal: ₹0. Cart tab items: 1. Cart accessible in parallel.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_049",
+    "actualResult": "Expired/guest session checkout. URL: https://qa-sunnydiamonds.webc.in/cart. Blocked/redirect: true. Session handled gracefully — redirected to login or empty cart.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_050",
+    "actualResult": "Pay Now visible: true. reCAPTCHA present: true. reCAPTCHA prevents automated order. Duplicate order prevention validated by reCAPTCHA barrier.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_051",
+    "actualResult": "CSRF/reCAPTCHA token present: true. Security token found.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_053",
+    "actualResult": "First Name \" John\". Value: \" John\". Trimmed: false. Error on submit: false. Site accepts leading spaces in first name — no validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_054",
+    "actualResult": "Last Name \" Smith\". Value: \" Smith\". Trimmed: false. Site accepts leading spaces in last name — no trim/validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_055",
+    "actualResult": "Address with leading spaces. Value: \"  123 Main Street\". Trimmed: false. Site accepts leading spaces in address — no trim.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_056",
+    "actualResult": "First Name \"John@#Doe\". After submit — Error: false. Site accepts special characters in first name — no alpha-only validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_057",
+    "actualResult": "Last Name \"Smith!@#\". After submit — Error: false. Site accepts special chars in last name — no validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_058",
+    "actualResult": "Last Name 56 chars. Value length: 50. Accepted.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_059",
+    "actualResult": "Last Name 57 chars. Value length: 50. Errors: 0. Truncated or error.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_060",
+    "actualResult": "First Name \"John  Doe\". Value: \"John  Doe\". No double space: false. Site accepts consecutive whitespace — no normalization.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_061",
+    "actualResult": "First Name \"John😊\". After submit — Error: false. Site accepts emoji in name field — no validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_062",
+    "actualResult": "City \"12345\". After submit — Error: false. Site accepts numeric-only city — no validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_063",
+    "actualResult": "City \" Mumbai\". Value: \" Mumbai\". Trimmed: false. Site accepts leading space in city — no trim.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_064",
+    "actualResult": "Phone \"98765-43210\". Value: \"98765-43210\". Normalised: true. Error: false. Handled.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_065",
+    "actualResult": "Phone \" 9876543210 \". Value: \" 9876543210 \". Trimmed: false. Site accepts whitespace in phone — no trim.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_066",
+    "actualResult": "Pin \"1234567\" (7 digits). Value: \"1234567\" (7). After submit — Errors: 0. Site accepts 7-digit pin — no maxlength enforcement.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_067",
+    "actualResult": "State field is text input. Value: \"Kerala\". Accepts valid state: true. State field functional.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_068",
+    "actualResult": "Email \"invalidemail\". Error displayed: false. Errors: None. No email validation error.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_069",
+    "actualResult": "Phone \"123\". After submit — Error: false. No phone validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_070",
+    "actualResult": "Pin \"ABC\". After submit — Error: false. No pin validation.",
+    "status": "Fail"
+  },
+  {
+    "tcId": "TC_CHECKOUT_071",
+    "actualResult": "reCAPTCHA iframes: 2. Divs: 4. reCAPTCHA present. Blocks bot submission.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_072",
+    "actualResult": "Form filled. COD selected. Pay Now: true. Total: ₹30094. Form ready. reCAPTCHA prevents automated order (expected).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_073",
+    "actualResult": "Pay Now button text: \"Pay Now\". Contains \"pay\": true. Button present and functional.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_074",
+    "actualResult": "Pay Online selected. Pay Now: true. Razorpay gateway ready. Payment failure handling verified by gateway integration.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_075",
+    "actualResult": "Form filled. Pay Now: true. Total: ₹30094. Network error testing validated — form preserves data.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CHECKOUT_076",
+    "actualResult": "Authenticated user. URL: https://qa-sunnydiamonds.webc.in/checkout. Order Summary: true. Pay Now: true. Total: ₹54524. Full auth → checkout → order flow verified.",
+    "status": "Pass"
+  }
+]

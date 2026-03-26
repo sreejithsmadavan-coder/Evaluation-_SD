@@ -36,7 +36,10 @@ async function setupCartSession(browser, vp) {
   await page.waitForTimeout(3000);
   await page.locator('a.product-item-content').first().click();
   await page.waitForTimeout(3000);
-  await page.locator('button.add-cart').first().click();
+  // Click Add to Cart (handle both desktop and mobile sticky button)
+  const addCartBtn1 = page.locator('button.add-cart:visible, button.add-cart').first();
+  await addCartBtn1.scrollIntoViewIfNeeded().catch(() => {});
+  await addCartBtn1.click({ force: true });
   await page.waitForTimeout(2000);
 
   // Add product 2
@@ -44,7 +47,9 @@ async function setupCartSession(browser, vp) {
   await page.waitForTimeout(2000);
   await page.locator('a.product-item-content').nth(1).click();
   await page.waitForTimeout(3000);
-  await page.locator('button.add-cart').first().click();
+  const addCartBtn2 = page.locator('button.add-cart:visible, button.add-cart').first();
+  await addCartBtn2.scrollIntoViewIfNeeded().catch(() => {});
+  await addCartBtn2.click({ force: true });
   await page.waitForTimeout(2000);
 
   // Go to cart
@@ -97,14 +102,7 @@ async function getItemPrice(page, idx) {
 }
 
 async function removeItem(page, idx) {
-  // Find and click the remove button via JS (since we need to discover its class)
-  await page.evaluate((i) => {
-    const items = document.querySelectorAll('.cartItem_cart_item__3pdCT');
-    if (!items[i]) return;
-    // Try multiple selectors for remove button
-    const btn = items[i].querySelector('button[class*="remove"], button[class*="delete"], [class*="remove"], [aria-label*="Remove"], [aria-label*="remove"], [class*="trash"], button:last-of-type');
-    if (btn) btn.click();
-  }, idx);
+  await page.locator('button.cartItem_remove_btn__2yLpd').nth(idx).click();
   await page.waitForTimeout(3000);
 }
 
@@ -387,12 +385,16 @@ async function run(browser) {
   }
 
   // TC_CART_022 — Mobile sticky checkout bar
-  { const { ctx, page } = await setupCartSession(browser, { width: 375, height: 812 });
+  { let ctx2, page2;
     try {
-      const mobileBtn = await page.locator('a.cart_mobile_checkout_btn__3j_PO, [class*="mobile_checkout"]').first().isVisible().catch(() => false);
+      // Setup with desktop first, then resize to mobile for cart page
+      ({ ctx: ctx2, page: page2 } = await setupCartSession(browser));
+      await page2.setViewportSize({ width: 375, height: 812 });
+      await goCart(page2);
+      const mobileBtn = await page2.locator('a.cart_mobile_checkout_btn__3j_PO, [class*="mobile_checkout"]').first().isVisible().catch(() => false);
       add('TC_CART_022', `Mobile viewport 375x812. Sticky checkout bar visible: ${mobileBtn}. ${mobileBtn ? 'Mobile checkout bar present.' : 'Not visible on mobile.'}`, mobileBtn ? 'Pass' : 'Fail');
     } catch (e) { add('TC_CART_022', 'Error: ' + e.message, 'Fail'); }
-    await cl(ctx, page);
+    if (ctx2) await cl(ctx2, page2);
   }
 
   // TC_CART_023 — Navigate via header cart icon
@@ -602,27 +604,33 @@ async function run(browser) {
   }
 
   // TC_CART_037 — Mobile viewport
-  { const { ctx, page } = await setupCartSession(browser, { width: 375, height: 812 });
+  { let ctx2, page2;
     try {
-      const hScroll = await page.evaluate(() => document.body.scrollWidth > window.innerWidth + 5);
-      const heading = await page.evaluate(() => {
-        const el = document.querySelector('[class*="cart_title"], [class*="My Cart"]');
+      ({ ctx: ctx2, page: page2 } = await setupCartSession(browser));
+      await page2.setViewportSize({ width: 375, height: 812 });
+      await goCart(page2);
+      const hScroll = await page2.evaluate(() => document.body.scrollWidth > window.innerWidth + 5);
+      const heading = await page2.evaluate(() => {
+        const el = document.querySelector('[class*="cart_title"]');
         return el ? el.textContent.includes('Cart') : false;
       });
       const pass = !hScroll;
       add('TC_CART_037', `Mobile 375x812. Horizontal scroll: ${hScroll}. Heading: ${heading}. ${pass ? 'Mobile layout correct.' : 'Layout issue.'}`, pass ? 'Pass' : 'Fail');
     } catch (e) { add('TC_CART_037', 'Error: ' + e.message, 'Fail'); }
-    await cl(ctx, page);
+    if (ctx2) await cl(ctx2, page2);
   }
 
   // TC_CART_038 — Tablet viewport
-  { const { ctx, page } = await setupCartSession(browser, { width: 768, height: 1024 });
+  { let ctx2, page2;
     try {
-      const hScroll = await page.evaluate(() => document.body.scrollWidth > window.innerWidth + 5);
+      ({ ctx: ctx2, page: page2 } = await setupCartSession(browser));
+      await page2.setViewportSize({ width: 768, height: 1024 });
+      await goCart(page2);
+      const hScroll = await page2.evaluate(() => document.body.scrollWidth > window.innerWidth + 5);
       const pass = !hScroll;
       add('TC_CART_038', `Tablet 768x1024. Horizontal scroll: ${hScroll}. ${pass ? 'Tablet layout correct.' : 'Layout issue.'}`, pass ? 'Pass' : 'Fail');
     } catch (e) { add('TC_CART_038', 'Error: ' + e.message, 'Fail'); }
-    await cl(ctx, page);
+    if (ctx2) await cl(ctx2, page2);
   }
 
   // TC_CART_039 — XSS in quantity
@@ -705,8 +713,12 @@ async function run(browser) {
 (async () => {
   console.log('=== Starting Cart Test Execution (42 Test Cases) ===\n');
   const browser = await chromium.launch({ headless: true });
-  await run(browser);
-  await browser.close();
+  try {
+    await run(browser);
+  } catch (e) {
+    console.log('Run error:', e.message);
+  }
+  await browser.close().catch(() => {});
   fs.writeFileSync(RESULTS, JSON.stringify(results, null, 2));
   const p = results.filter(r => r.status === 'Pass').length;
   const f = results.filter(r => r.status === 'Fail').length;

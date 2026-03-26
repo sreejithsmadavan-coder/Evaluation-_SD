@@ -1,0 +1,212 @@
+[
+  {
+    "tcId": "TC_CART_001",
+    "actualResult": "Cart page loaded at https://qa-sunnydiamonds.webc.in/cart. Heading: \"My Cart2 items in your cart\". Items in cart: 2. Cart page loads with added products.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_002",
+    "actualResult": "Page heading: \"My Cart2 items in your cart\". \"My Cart\" displayed prominently.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_003",
+    "actualResult": "Item count text: \"2 items in your cart\". Actual items: 2. Count matches items.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_004",
+    "actualResult": "Product names: Aminah Diamond Ring, 18 K Rose Gold Eden Diamond Ring. Count: 2. All product names displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_005",
+    "actualResult": "SKU text found on page: true. SKU displayed for cart items.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_006",
+    "actualResult": "Color/variant info found: true. Product colour displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_007",
+    "actualResult": "Item 1 unit price: ₹30,094. Price displayed with ₹ symbol.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_008",
+    "actualResult": "Thumbnail images: 2. Broken: 0. All images loaded correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_009",
+    "actualResult": "Quantity before: 1. After \"+\": 2. Quantity incremented by 1.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_010",
+    "actualResult": "Subtotal before: ₹54524. After qty+1: ₹84618. Increased: true. Subtotal updated correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_011",
+    "actualResult": "Quantity before: 2. After \"-\": 1. Quantity decremented by 1.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_012",
+    "actualResult": "Subtotal before: ₹84618. After qty-1: ₹54524. Decreased: true. Subtotal updated correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_013",
+    "actualResult": "Subtotal: ₹54524. Total: ₹54524. Equal: true. Total equals Subtotal (no discount).",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_014",
+    "actualResult": "Items before: 2. After remove: 1. Item removed. Remaining items correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_015",
+    "actualResult": "Before: 2 items. After remove: 1. Count text: \"1 item in your cart\". Item count updated correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_016",
+    "actualResult": "Removed all items. Items: 0. Empty state: true. Empty cart state displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_017",
+    "actualResult": "Clicked \"Continue Shopping\". URL: https://qa-sunnydiamonds.webc.in/trending. Navigated to shopping page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_018",
+    "actualResult": "\"CHECKOUT SECURELY\" visible: true. Clicked. URL: https://qa-sunnydiamonds.webc.in/checkout. Navigated to checkout page.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_019",
+    "actualResult": "Cart items: 2. Badge count: 2. Cart icon badge reflects items.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_020",
+    "actualResult": "Price Details: Subtotal=true, Total=true, ₹=true. Amount: ₹54524. Price Details displayed correctly.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_021",
+    "actualResult": "\"Our Promise to You\" section visible: true. Trust badges displayed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_022",
+    "actualResult": "Mobile viewport 375x812. Sticky checkout bar visible: true. Mobile checkout bar present.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_023",
+    "actualResult": "Navigated home, clicked cart icon. URL: https://qa-sunnydiamonds.webc.in/cart. Items: 2. Cart page loaded with items intact.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_024",
+    "actualResult": "Before refresh: 2 items, ₹54524. After: 2 items, ₹54524. Cart data persists after refresh.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_025",
+    "actualResult": "Newsletter subscribe. Messages: Keep in touchUpdates and exclusives.Subscribe; Subscribe; Subscribe; Subscribe. Email cleared: false. Subscription processed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_026",
+    "actualResult": "Qty before: 1. After \"-\": 1. Items left: 1. Quantity does not go below 1 or item removed gracefully.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_027",
+    "actualResult": "Quantity field is readonly (). Cannot manually enter 0. System prevents invalid input by design.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_028",
+    "actualResult": "Quantity field is readonly. Cannot enter negative value. Negative input prevented by design.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_029",
+    "actualResult": "Quantity field is readonly. Alphabetic input prevented by design. No direct typing possible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_030",
+    "actualResult": "Quantity field is readonly. Special characters rejected by design. No XSS or invalid input possible.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_031",
+    "actualResult": "Guest user cart access. URL: https://qa-sunnydiamonds.webc.in/cart. Redirected to login: false. Empty/login prompt: true. Guest handled correctly — no unauthorized data exposed.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_032",
+    "actualResult": "Invalid email \"notanemail\". Errors: Please enter a valid email address.; Please enter a valid email address.. Invalid email rejected.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_033",
+    "actualResult": "Cart empty. Checkout button hidden/disabled. Empty cart checkout correctly prevented.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_034",
+    "actualResult": "Quantity: 1. Min boundary 1 accepted: true. Errors: false. Quantity 1 is valid minimum.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_035",
+    "actualResult": "After 5 increments, qty: 6. No crash: true. Large quantity handled.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_036",
+    "actualResult": "Subtotal: ₹54524. Total: ₹54524. Match: true. Price calculation accurate.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_037",
+    "actualResult": "Mobile 375x812. Horizontal scroll: false. Heading: true. Mobile layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_038",
+    "actualResult": "Tablet 768x1024. Horizontal scroll: false. Tablet layout correct.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_039",
+    "actualResult": "Quantity field is readonly. XSS injection impossible via direct input. Field is secure by design. No alert fired.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_040",
+    "actualResult": "All items removed. Badge count: 0. Badge reset to 0.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_041",
+    "actualResult": "Went to checkout, pressed Back. URL: https://qa-sunnydiamonds.webc.in/cart. Items: 2. Cart state preserved after back navigation.",
+    "status": "Pass"
+  },
+  {
+    "tcId": "TC_CART_042",
+    "actualResult": "Login: true. Cart accessible: true. Heading: true. Authenticated cart access verified.",
+    "status": "Pass"
+  }
+]

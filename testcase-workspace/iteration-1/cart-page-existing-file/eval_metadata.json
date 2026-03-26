@@ -1,0 +1,18 @@
+{
+  "eval_id": 2,
+  "eval_name": "cart-page-existing-file",
+  "prompt": "I have an existing Excel file at C:\\TestCases\\QA_Suite.xlsx and I want to add test cases for the Cart Page (https://example-shop.com/cart) WITHOUT creating a new file. Add a sheet called 'Cart Page'. I want positive, negative and edge cases. Valid login credentials: admin@shop.com / Admin123. Place the valid login TC last. Created By: Priya Nair. Include BVA for quantity field (min=1) and cover XSS in the quantity input.",
+  "assertions": [
+    "The script loads an EXISTING file rather than creating a new one from scratch",
+    "shutil.copy2 or equivalent is used to work on a temp copy before saving",
+    "The sheet is named exactly 'Cart Page'",
+    "At least 20 test cases are generated for the Cart module",
+    "The valid login TC (admin@shop.com) is the LAST test case",
+    "A BVA test case for quantity = 1 (minimum boundary) is included",
+    "An XSS test case for the quantity input field is included",
+    "A negative TC for guest user accessing /cart without login is included",
+    "The PermissionError fallback (save to temp file) is implemented",
+    "Created By is set to 'Priya Nair'",
+    "The script does NOT create a completely new Excel file — it adds to the existing one"
+  ]
+}
