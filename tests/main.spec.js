@@ -15,7 +15,7 @@
  */
 
 // ==================== REGISTRATION MODULE ====================
-// require('./registration/registration.spec.js');
+require('./registration/registration.spec.js');
 
 // ==================== LOGIN MODULE ====================
 require('./login/login.spec.js');
@@ -29,9 +29,11 @@ require('./plp/plp.spec.js');
 // ==================== CART PAGE MODULE ====================
 require('./cart/cart.spec.js');
 
+// ==================== PDP (PRODUCT DETAIL PAGE) MODULE ====================
+require('./pdp/pdp.spec.js');
+
 // ==================== FUTURE MODULES ====================
 // Uncomment and add new page test imports below as they are created:
 //
-// require('./product/product.spec.js');
 // require('./checkout/checkout.spec.js');
 // require('./profile/profile.spec.js');

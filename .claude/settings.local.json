@@ -26,7 +26,9 @@
       "Bash(powershell -Command \"Stop-Process -Id 18512 -Force\")",
       "Bash(mv -f \"TestCase/SunnyDiamonds_v2_home_updated.xlsx\" \"TestCase/SunnyDiamonds_v2.xlsx\")",
       "Bash(node run-plp-tests.js)",
-      "Bash(node rerun-plp-failed.js)"
+      "Bash(node rerun-plp-failed.js)",
+      "Bash(npm install:*)",
+      "Bash(node run-checkout-not-tested.js)"
     ]
   }
 }

@@ -435,4 +435,35 @@ const LoginData = {
   },
 };
 
-module.exports = { RegistrationData, LoginData };
+const PDPData = {
+  // Product URL
+  productUrl: '/18-k-rose-gold-mia-diamond-pendant?variant_id=45',
+  productUrlNoVariant: '/18-k-rose-gold-mia-diamond-pendant',
+  productUrlInvalidVariant: '/18-k-rose-gold-mia-diamond-pendant?variant_id=99999',
+
+  // Expected product info
+  productTitle: '18 K ROSE GOLD MIA DIAMOND PENDANT',
+  sku: '1120821883027',
+  price: '47,419',
+  taxLabel: 'MRP Inclusive of all taxes',
+  rating: '4.5',
+
+  // Pincode test data
+  validPincode: '682035',
+  shortPincode: '6820',
+  alphabeticPincode: 'ABCDEF',
+  unserviceablePincode: '110001',
+  sevenDigitPincode: '6820350',
+  xssPincode: '<script>alert(1)</script>',
+
+  // Newsletter test data
+  validEmail: 'testuser@example.com',
+  invalidEmail: 'notanemail',
+  xssEmail: '<img src=x onerror=alert(1)>',
+
+  // Login credentials for TC_PDP_044
+  loginEmail: 'sreejith.s+4@webandcrafts.com',
+  loginPassword: 'Password',
+};
+
+module.exports = { RegistrationData, LoginData, PDPData };
