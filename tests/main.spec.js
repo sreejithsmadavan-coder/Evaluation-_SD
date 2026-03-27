@@ -32,8 +32,10 @@ require('./cart/cart.spec.js');
 // ==================== PDP (PRODUCT DETAIL PAGE) MODULE ====================
 require('./pdp/pdp.spec.js');
 
+// ==================== CHECKOUT PAGE MODULE ====================
+require('./checkout/checkout.spec.js');
+
 // ==================== FUTURE MODULES ====================
 // Uncomment and add new page test imports below as they are created:
 //
-// require('./checkout/checkout.spec.js');
 // require('./profile/profile.spec.js');

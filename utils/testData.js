@@ -466,4 +466,36 @@ const PDPData = {
   loginPassword: 'Password',
 };
 
-module.exports = { RegistrationData, LoginData, PDPData };
+const CheckoutData = {
+  // Login credentials
+  email: 'sreejith.s+4@webandcrafts.com',
+  password: 'Password',
+
+  // Valid shipping address (logged-in user)
+  validShipping: {
+    firstName: 'Sreejith',
+    lastName: 'Madavan',
+    email: 'sreejith.s+4@webandcrafts.com',
+    phone: '9876543210',
+    address: '42 MG Road, Kakkanad',
+    pinCode: '682021',
+    city: 'Kochi',
+    state: 'Kerala',
+    country: 'India',
+  },
+
+  // Guest shipping address
+  guestShipping: {
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'johndoe@gmail.com',
+    phone: '9876543210',
+    address: '123 Main Street',
+    pinCode: '682001',
+    city: 'Kochi',
+    state: 'Kerala',
+    country: 'India',
+  },
+};
+
+module.exports = { RegistrationData, LoginData, PDPData, CheckoutData };

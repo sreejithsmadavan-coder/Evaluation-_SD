@@ -1,0 +1,1235 @@
+[
+  {
+    "tcId": "TC_CHECKOUT_001",
+    "desc": "Full setup flow — Login, add 2 products to cart, navigate to Checkout page",
+    "preconditions": "User has valid account: sreejith.s+4@webandcrafts.com / Password",
+    "steps": "1. Navigate to https://qa-sunnydiamonds.webc.in/login\n2. Enter email: sreejith.s+4@webandcrafts.com\n3. Enter password: Password\n4. Click 'Login' button\n5. Navigate to 'ALL JEWELLERY' (PLP) via header menu\n6. Click on 'Aminah Diamond Ring'\n7. On PDP, select a variant and click 'ADD TO CART'\n8. Navigate back to PLP\n9. Click on '18K Rose Gold Eden Diamond Ring'\n10. On PDP, select a variant and click 'ADD TO CART'\n11. Click cart icon in header\n12. On Cart page, click 'CHECKOUT SECURELY'\n13. Observe Checkout page loads",
+    "expected": "User is logged in. Two products appear in cart. Checkout page loads at /checkout with Shipping Address form, Order Summary, and Payment section visible.",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_002",
+    "desc": "Shipping Address — Enter valid First Name (alphabets only)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'First Name' field\n3. Enter: 'Sreejith'\n4. Click outside the field (tab-out)",
+    "expected": "First Name field accepts 'Sreejith'. No validation error shown.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_003",
+    "desc": "Shipping Address — Enter valid Last Name",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Last Name' field\n3. Enter: 'Madavan'\n4. Tab out of field",
+    "expected": "Last Name accepts 'Madavan' without error.",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_004",
+    "desc": "Shipping Address — Enter valid Email Address",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Email Address' field\n3. Enter: 'sreejith.s+4@webandcrafts.com'\n4. Tab out of field",
+    "expected": "Email accepted. No error message displayed.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_005",
+    "desc": "Shipping Address — Enter valid 10-digit Phone Number",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Phone Number' field\n3. Enter: '9876543210'\n4. Tab out of field",
+    "expected": "Phone accepted without error. 10-digit value stored.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_006",
+    "desc": "Shipping Address — Enter valid street Address",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Address' field\n3. Enter: '42 MG Road, Kakkanad'\n4. Tab out of field",
+    "expected": "Address field accepts the input without error.",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_007",
+    "desc": "Shipping Address — Enter valid 6-digit Pin Code",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Pin Code' field\n3. Enter: '682021'\n4. Tab out of field",
+    "expected": "Pin Code accepted. No error. City/State may auto-populate.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_008",
+    "desc": "Shipping Address — Enter valid City name",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'City' field\n3. Enter: 'Kochi'\n4. Tab out",
+    "expected": "City accepted without error.",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_009",
+    "desc": "Shipping Address — Select valid State from dropdown",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click 'State' dropdown\n3. Select 'Kerala'\n4. Observe field updates",
+    "expected": "State dropdown updates to 'Kerala'. No error.",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_010",
+    "desc": "Shipping Address — Verify Country defaults to India",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Country' dropdown/field\n3. Observe default value",
+    "expected": "Country field defaults to 'India'. User can change if needed.",
+    "testType": "Positive",
+    "priority": "Low"
+  },
+  {
+    "tcId": "TC_CHECKOUT_011",
+    "desc": "Verify 'Use this address as billing' checkbox is checked by default",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Scroll to 'Use this address as my billing address' checkbox\n3. Observe its checked state",
+    "expected": "Checkbox is checked by default. Separate billing address form is hidden.",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_012",
+    "desc": "Uncheck 'Use same billing address' — verify separate billing form appears",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Uncheck 'Use this address as my billing address' checkbox\n3. Observe UI change",
+    "expected": "Separate Billing Address form becomes visible with its own required fields.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_013",
+    "desc": "Apply a valid coupon code — verify discount applied to order total",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Coupon Code' input field\n3. Enter a valid coupon code\n4. Click 'Apply' button\n5. Observe Order Summary",
+    "expected": "Coupon applied successfully. Coupon Discount line shows deduction. Order total is recalculated.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_014",
+    "desc": "Apply a valid Gift Card — verify redemption amount deducted from total",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate 'Gift Card' input field\n3. Enter a valid gift card number\n4. Click 'Apply' button\n5. Observe Order Summary",
+    "expected": "Gift card applied. 'Redeemed Amount' line shown in summary. Total reduced accordingly.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_015",
+    "desc": "Select 'Cash on Delivery' payment method",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Scroll to Payment section\n3. Select 'Cash on Delivery' radio button\n4. Observe UI",
+    "expected": "COD radio selected. No card detail fields appear. PAY NOW button is enabled.",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_016",
+    "desc": "Select 'Pay Online' payment method — Razorpay gateway loads",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Select 'Pay Online' radio button\n3. Fill all shipping address fields with valid data\n4. Click 'PAY NOW'\n5. Observe Razorpay modal",
+    "expected": "Razorpay payment modal/popup opens with correct order amount. Card/UPI/wallet options visible.",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_017",
+    "desc": "Complete order successfully with Cash on Delivery",
+    "preconditions": "User is logged in; Checkout page has 2 items; all address fields valid",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all required address fields with valid data\n3. Select 'Cash on Delivery'\n4. Click 'PAY NOW'\n5. Observe confirmation",
+    "expected": "Order placed successfully. Confirmation page/message shown with order ID. Cart is cleared.",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_018",
+    "desc": "Verify Order Summary displays correct product names, SKU, quantity and price",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Scroll to Order Summary section\n3. Verify each item: product name, SKU, quantity, unit price",
+    "expected": "All products in cart appear in Order Summary with correct name, SKU, qty, and price matching cart.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_019",
+    "desc": "Verify Subtotal = sum of (price × qty) for all items in Order Summary",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Note each item's price and quantity in Order Summary\n3. Calculate expected subtotal manually\n4. Compare with displayed Subtotal",
+    "expected": "Displayed Subtotal equals sum of (price × qty) for all items. No rounding errors.",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_020",
+    "desc": "Verify Total = Subtotal + Service Charges − Coupon Discount − Redeemed Amount",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Note Subtotal, Service Charges (if any), discounts in Order Summary\n3. Calculate expected Total\n4. Compare with displayed Total",
+    "expected": "Displayed Total matches the calculated value. No discrepancy.",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_021",
+    "desc": "First Name BVA — Enter exactly 56 characters (maximum allowed)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. In 'First Name' field, enter 56 alphabetic characters: 'Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd'\n3. Tab out",
+    "expected": "Field accepts 56-char value. No error shown. Field does not truncate input.",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_022",
+    "desc": "Submit Checkout with all Shipping Address fields empty",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart; all fields are blank",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Ensure all address fields are empty\n3. Click 'PAY NOW' button",
+    "expected": "Validation errors appear for all 9 required fields (First Name, Last Name, Email, Phone, Address, Pin Code, City, State, Country). Form is NOT submitted.",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_023",
+    "desc": "Leave First Name empty — verify field-level error on tab-out",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click into 'First Name' field, do not enter any value\n3. Tab out to next field",
+    "expected": "Inline error message appears near First Name field (e.g., 'First name is required'). Error class 'errorText' becomes visible.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_024",
+    "desc": "Enter invalid Email format (missing @ symbol)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'invalidemail.com' in Email Address field\n3. Tab out",
+    "expected": "Validation error shown: 'Invalid email address' or similar. Field highlighted. Form not submittable.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_025",
+    "desc": "Enter Email with leading and trailing spaces",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '  test@example.com  ' (with spaces) in Email field\n3. Tab out",
+    "expected": "Email is trimmed and accepted, OR validation error is shown. Spaces should not be submitted as part of email.",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_026",
+    "desc": "Enter Phone Number with fewer than 10 digits",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '98765' in Phone Number field\n3. Tab out",
+    "expected": "Validation error: 'Please enter a valid 10-digit phone number' or similar. Form not submittable.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_027",
+    "desc": "Enter Phone Number with more than 10 digits",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '98765432101234' in Phone Number field\n3. Tab out",
+    "expected": "Validation error shown for invalid phone length OR field restricts to 10 digits. Form not submittable.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_028",
+    "desc": "Enter Phone Number with special characters",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '98765@#$!0' in Phone Number field\n3. Tab out",
+    "expected": "Validation error: phone must contain digits only. Special chars rejected or field shows error.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_029",
+    "desc": "Enter Pin Code with alphabetic characters",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'ABCDEF' in Pin Code field\n3. Tab out",
+    "expected": "Validation error: 'Enter a valid 6-digit pin code' or similar. Alphabets not accepted.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_030",
+    "desc": "Enter First Name containing numeric digits",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'Sree123' in First Name field\n3. Tab out",
+    "expected": "Validation error: 'Name must contain alphabets only' or similar. Numbers not accepted.",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_031",
+    "desc": "Apply an invalid/expired Coupon Code",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'INVALID999' in Coupon Code field\n3. Click 'Apply'",
+    "expected": "Error message displayed: 'Invalid coupon code' or 'Coupon expired'. Discount NOT applied to total.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_032",
+    "desc": "Apply an invalid Gift Card number",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'FAKEGIFTCARD123' in Gift Card field\n3. Click 'Apply'",
+    "expected": "Error message: 'Invalid gift card' or 'Gift card not found'. No deduction from total.",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_033",
+    "desc": "Click 'Apply' for Coupon Code with empty input",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Leave Coupon Code field empty\n3. Click 'Apply'",
+    "expected": "Error or prompt: 'Please enter a coupon code'. Apply action does not proceed with empty field.",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_034",
+    "desc": "Access Checkout page directly without being logged in",
+    "preconditions": "User is NOT logged in (fresh browser / guest session)",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Observe page response",
+    "expected": "User is redirected to Login page or an 'Unauthorized' message is shown. Checkout page is NOT accessible without authentication.",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_035",
+    "desc": "First Name BVA — Enter 1 character (below minimum of 2)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'A' in First Name field\n3. Tab out",
+    "expected": "Validation error shown: 'First name must be at least 2 characters'. Single char rejected.",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_036",
+    "desc": "First Name BVA — Enter exactly 2 characters (minimum allowed)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'Jo' in First Name field\n3. Tab out",
+    "expected": "Field accepts 2-character name without error. BVA min boundary is valid.",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_037",
+    "desc": "First Name BVA — Enter 57 characters (one above maximum of 56)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter a 57-character string in First Name field\n3. Tab out",
+    "expected": "Validation error shown OR field truncates to 56 chars. 57-char input is rejected or clipped.",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_038",
+    "desc": "Phone Number BVA — Enter 9 digits (one below minimum valid length)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '987654321' (9 digits) in Phone Number field\n3. Tab out",
+    "expected": "Validation error: invalid phone number. 9-digit input rejected.",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_039",
+    "desc": "Enter Phone Number with +91 country code prefix",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '+919876543210' in Phone Number field\n3. Tab out",
+    "expected": "Field either accepts +91 prefix (13 chars total) or shows validation error if only 10 digits expected.",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_040",
+    "desc": "Pin Code BVA — Enter 5 digits (below 6-digit minimum)",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '68202' in Pin Code field\n3. Tab out",
+    "expected": "Validation error: 'Enter valid 6-digit pin code'. 5-digit input rejected.",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_041",
+    "desc": "OWASP — XSS injection in First Name field",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '<script>alert(\"XSS\")</script>' in First Name field\n3. Tab out\n4. Attempt to submit form",
+    "expected": "Script tag is NOT executed. Input is sanitized or rejected. No alert popup appears. Error shown or input stripped.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_042",
+    "desc": "OWASP — SQL Injection in Address field",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter \"' OR '1'='1'; DROP TABLE orders; --\" in Address field\n3. Tab out\n4. Attempt to submit form",
+    "expected": "SQL injection payload is NOT executed. Input is sanitized. No database error shown. Form rejects or escapes the input.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_043",
+    "desc": "OWASP — XSS injection attempt in Email field",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '<img src=x onerror=alert(1)>@test.com' in Email field\n3. Tab out",
+    "expected": "Script/image tag is NOT executed. Email validation rejects the input. No browser alert fires.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_044",
+    "desc": "OWASP — XSS injection in Coupon Code field",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '<script>alert(\"xss\")</script>' in Coupon Code field\n3. Click 'Apply'",
+    "expected": "XSS payload is rejected/sanitized. No script executes. Error message shown for invalid coupon.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_045",
+    "desc": "Refresh browser during checkout — verify form data persistence",
+    "preconditions": "User is logged in and on Checkout page with partially filled address form",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill First Name, Last Name, Email fields\n3. Press F5 / browser refresh\n4. Observe form state",
+    "expected": "After refresh: user remains on checkout page. Cart items persist. Form fields may reset (acceptable) or retain values (better UX).",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_046",
+    "desc": "Navigate back from Checkout to Cart using browser back button",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click browser back button\n3. Observe destination page and cart state",
+    "expected": "User is navigated back to Cart page. Cart items remain intact with correct quantities and prices.",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_047",
+    "desc": "Open Checkout page in two browser tabs simultaneously",
+    "preconditions": "User is logged in; cart has 2 items",
+    "steps": "1. Navigate to https://qa-sunnydiamonds.webc.in/checkout in Tab 1\n2. Open a new tab\n3. Navigate to https://qa-sunnydiamonds.webc.in/checkout in Tab 2\n4. Fill form in Tab 1, click PAY NOW\n5. Switch to Tab 2 and attempt payment",
+    "expected": "Only one order is placed. Second tab shows 'Order already processed' or cart is empty. No duplicate orders.",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_048",
+    "desc": "Modify cart in another tab while checkout is in progress",
+    "preconditions": "User is logged in; Tab 1 on Checkout page; Tab 2 on Cart page",
+    "steps": "1. Open Checkout page in Tab 1\n2. Open Cart page in Tab 2\n3. Remove one item from cart in Tab 2\n4. Return to Tab 1 (Checkout)\n5. Attempt to complete checkout",
+    "expected": "System detects cart change. Order Summary in Tab 1 updates or shows stale data warning. Order total reflects current cart state.",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_049",
+    "desc": "Session expires while user is on Checkout page — verify graceful handling",
+    "preconditions": "User is logged in and on Checkout page; session will be expired (simulate)",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Wait for session to expire (or clear session cookie manually)\n3. Attempt to click 'PAY NOW'",
+    "expected": "User is redirected to Login page with a message 'Your session has expired. Please log in again.' Order is NOT partially submitted.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_050",
+    "desc": "Press browser back button after successful order — verify no duplicate order",
+    "preconditions": "User has just completed an order successfully; confirmation page is shown",
+    "steps": "1. Complete a COD order (see TC_CHECKOUT_017)\n2. On order confirmation page, click browser back button\n3. Observe destination\n4. If returned to checkout, attempt to click PAY NOW again",
+    "expected": "Browser back either goes to cart (now empty) or checkout page shows 'Order already placed'. PAY NOW cannot submit duplicate order.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_051",
+    "desc": "OWASP — Verify CSRF token present in checkout form submission",
+    "preconditions": "User is logged in and on Checkout page with 2 items in cart",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Open browser DevTools → Network tab\n3. Fill all required fields\n4. Click PAY NOW\n5. Inspect the POST request payload in Network tab",
+    "expected": "POST request includes a CSRF token (e.g., X-CSRF-Token header or hidden _token field). Token is unique per session.",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_053",
+    "desc": "First Name — Enter value with leading space — should be blocked or trimmed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click on First Name field\n3. Type ' John' (with leading space)\n4. Click on another field\n5. Observe field value and error message",
+    "expected": "Leading space is blocked or auto-trimmed; no leading space in submitted value; field shows error or trims to 'John'",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_054",
+    "desc": "Last Name — Enter value with leading space — should be blocked or trimmed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click on Last Name field\n3. Type ' Smith' (with leading space)\n4. Click on another field\n5. Observe field value and error message",
+    "expected": "Leading space is blocked or auto-trimmed; no leading space in submitted value",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_055",
+    "desc": "Address field — Enter value with leading space — should be blocked or trimmed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click on Address field\n3. Type '  123 Main Street' (with leading spaces)\n4. Tab out\n5. Observe value and validation",
+    "expected": "Leading spaces are blocked or trimmed; address value starts with alphanumeric character",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_056",
+    "desc": "First Name — Enter special characters (e.g., 'John@#Doe') — should be rejected",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'John@#Doe' in First Name field\n3. Tab out\n4. Observe error message",
+    "expected": "Field rejects special characters; error message displayed: 'First Name should contain alphabets only' or similar",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_057",
+    "desc": "Last Name — Enter special characters (e.g., 'Smith!@#') — should be rejected",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'Smith!@#' in Last Name field\n3. Tab out\n4. Observe error message",
+    "expected": "Field rejects special characters; error message displayed indicating alphabets only",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_058",
+    "desc": "Last Name BVA — Enter exactly 56 characters (maximum allowed)",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter a 56-character alphabetic string in Last Name field (e.g., 'A'*56)\n3. Tab out\n4. Observe acceptance",
+    "expected": "Last Name field accepts exactly 56 characters; no error displayed; value saved correctly",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_059",
+    "desc": "Last Name BVA — Enter 57 characters (one above maximum of 56)",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter a 57-character alphabetic string in Last Name field\n3. Tab out\n4. Observe validation",
+    "expected": "Field rejects input beyond 56 characters; either input is truncated at 56 or error message is displayed",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_060",
+    "desc": "First Name — Enter consecutive whitespace (e.g., 'John  Doe' with double space) — should be collapsed or blocked",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'John  Doe' (two consecutive spaces) in First Name field\n3. Tab out\n4. Observe behavior",
+    "expected": "Consecutive whitespace is either collapsed to single space or an error is shown; field does not accept multiple consecutive spaces",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_061",
+    "desc": "First Name — Enter emoji characters (e.g., 'John') — system should handle or reject",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'John' in First Name field\n3. Tab out\n4. Observe behavior and error",
+    "expected": "System rejects emoji input with appropriate error message, OR displays validation error indicating only alphabets are accepted",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_062",
+    "desc": "City field — Enter numeric digits only (e.g., '12345') — should be rejected",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '12345' in City field\n3. Tab out\n4. Observe error message",
+    "expected": "City field rejects numeric-only input; error message displayed indicating valid city name required",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_063",
+    "desc": "City field — Enter leading space (e.g., ' Mumbai') — should be blocked or trimmed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter ' Mumbai' (with leading space) in City field\n3. Tab out\n4. Observe behavior",
+    "expected": "Leading space is blocked or trimmed; city value starts with a letter",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_064",
+    "desc": "Phone Number — Enter with dashes (e.g., '98765-43210') — verify acceptance or rejection",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '98765-43210' in Phone Number field\n3. Tab out\n4. Observe validation behavior",
+    "expected": "System either accepts the dashed format and normalizes it to '9876543210', or displays error asking for 10-digit format without dashes",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_065",
+    "desc": "Phone Number — Enter with leading/trailing whitespace (e.g., ' 9876543210 ') — should be blocked",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter ' 9876543210 ' (with spaces before and after) in Phone Number field\n3. Tab out\n4. Observe behavior",
+    "expected": "Leading and trailing whitespace is blocked or trimmed; phone field does not accept spaces around the number",
+    "testType": "Negative",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_066",
+    "desc": "Pin Code BVA — Enter 7 digits (one above maximum 6-digit limit)",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '1234567' (7 digits) in Pin Code field\n3. Tab out\n4. Observe validation",
+    "expected": "Field rejects 7-digit input; either truncates at 6 digits or error message displayed for invalid PIN code",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_067",
+    "desc": "State dropdown — Verify options are sorted alphabetically and all Indian states/UTs are present",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click on State dropdown\n3. Observe all options listed\n4. Verify alphabetical sort order\n5. Verify count matches 28 states + 8 UTs = 36 options",
+    "expected": "State dropdown contains all Indian states and UTs (36 total); options are sorted alphabetically from 'Andaman and Nicobar Islands' to 'West Bengal'",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_068",
+    "desc": "Email field — Verify error message appears on tab-out when invalid email entered",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click Email Address field\n3. Enter 'invalidemail' (no @)\n4. Press Tab to move to next field\n5. Observe immediate error display",
+    "expected": "Error message 'Invalid email address' or similar appears immediately on tab-out, displayed near the Email field, without needing to click PAY NOW",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_069",
+    "desc": "Phone Number field — Verify error message appears on tab-out when invalid phone entered",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click Phone Number field\n3. Enter '123' (too short)\n4. Press Tab to move to next field\n5. Observe immediate error display",
+    "expected": "Error message appears immediately on tab-out near the Phone Number field indicating invalid format or minimum length required",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_070",
+    "desc": "Pin Code field — Verify error message appears on tab-out when non-numeric or short value entered",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click Pin Code field\n3. Enter 'ABC' (alphabetic)\n4. Press Tab to move to next field\n5. Observe immediate error display",
+    "expected": "Error message appears immediately on tab-out near Pin Code field: 'Please enter a valid 6-digit PIN code' or similar",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_071",
+    "desc": "Verify reCAPTCHA is present on checkout page and blocks submission if not completed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory shipping address fields with valid data\n3. Select a payment method\n4. Do NOT complete reCAPTCHA verification\n5. Click PAY NOW button\n6. Observe system response",
+    "expected": "reCAPTCHA widget is visible on checkout page; clicking PAY NOW without completing CAPTCHA displays error message preventing form submission",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_072",
+    "desc": "Verify success message displayed after successful order placement (COD)",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory fields with valid data\n3. Select 'Cash on Delivery'\n4. Complete reCAPTCHA\n5. Click PAY NOW\n6. Observe success message and page redirect",
+    "expected": "Success message displayed (e.g., 'Order placed successfully!' or order confirmation screen shown); user redirected to order confirmation page with order ID",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_073",
+    "desc": "PAY NOW button — Verify button is disabled or shows loader after first click to prevent duplicate submission",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields with valid data\n3. Select COD payment\n4. Click PAY NOW\n5. Immediately attempt to click PAY NOW again before page transitions\n6. Observe button state",
+    "expected": "PAY NOW button becomes disabled or shows loading spinner after first click; second click has no effect; only one order is created",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_074",
+    "desc": "Verify error message displayed when online payment fails via Razorpay",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory fields with valid data\n3. Select 'Pay Online' (Razorpay)\n4. Click PAY NOW\n5. In Razorpay popup, simulate payment failure (use test card for failure)\n6. Observe error handling on checkout page",
+    "expected": "Payment failure is handled gracefully; error message displayed: 'An error occurred while processing payment. Please try again.' or similar; user remains on checkout page with form data preserved",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_075",
+    "desc": "Simulate network error during checkout — verify appropriate error message displayed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields with valid data\n3. Throttle network to offline using DevTools (F12 > Network > Offline)\n4. Click PAY NOW\n5. Observe error handling",
+    "expected": "System displays network error message: 'Network error. Please check your internet connection and try again.' User is not charged; form data preserved after reconnection",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_076",
+    "desc": "Click 'Edit Cart' link in Order Summary on Checkout page — verify navigation to Cart page",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Locate the Order Summary section (top-right)\n3. Click the 'Edit Cart' link next to the Order Summary heading\n4. Observe page navigation",
+    "expected": "User is redirected to the Cart page (/cart); cart items, quantities, and prices are displayed correctly; breadcrumb updates to 'Home > Cart'",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_077",
+    "desc": "Increase cart item quantity from Cart page — navigate back to Checkout — verify Order Summary total updates",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click 'Edit Cart' in Order Summary\n3. On Cart page, click '+' (increment) button on an item to increase quantity (e.g., qty 1 → 6)\n4. Observe 'Item Added to Cart' toast notification\n5. Click 'CHECKOUT SECURELY' button\n6. On Checkout page, verify Order Summary reflects new quantity and recalculated total",
+    "expected": "'Item Added to Cart' toast displayed on cart page; on returning to Checkout, Order Summary shows updated quantity (e.g., 6x item); Subtotal and Total are recalculated correctly (qty × unit price)",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_078",
+    "desc": "Remove item from Cart page — navigate back to Checkout — verify Order Summary updates",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click 'Edit Cart' in Order Summary\n3. On Cart page, click the delete/remove icon on a cart item\n4. Observe 'Item Removed from Cart' toast notification\n5. Click 'CHECKOUT SECURELY'\n6. On Checkout page, verify Order Summary no longer shows removed item and total is recalculated",
+    "expected": "'Item Removed from Cart' toast displayed; Checkout Order Summary no longer shows the removed item; Subtotal and Total recalculate correctly based on remaining items",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_079",
+    "desc": "Decrease cart item quantity from Cart page — navigate back to Checkout — verify recalculated total",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Click 'Edit Cart' in Order Summary\n3. On Cart page, click '-' (decrement) button to decrease quantity of an item\n4. Click 'CHECKOUT SECURELY'\n5. On Checkout page, verify Order Summary shows reduced quantity and lower total",
+    "expected": "Quantity decremented on cart; Checkout Order Summary reflects reduced qty; Subtotal and Total recalculate correctly (new qty × unit price)",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_080",
+    "desc": "Select 'Cash on Delivery' — verify PAY NOW button label changes to 'PLACE ORDER'",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Scroll down to Payment Method section\n3. Select 'Cash on Delivery' radio button\n4. Observe the submit button label at the bottom of the form",
+    "expected": "When 'Cash on Delivery' is selected, the submit button label changes from 'PAY NOW' to 'PLACE ORDER'; button is enabled and visible",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_081",
+    "desc": "Switch from Cash on Delivery to 'Pay Online' — verify button label changes back to 'PAY NOW'",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Scroll to Payment Method section\n3. Select 'Cash on Delivery' radio button (button shows PLACE ORDER)\n4. Then select 'Pay Online' radio button\n5. Observe submit button label change",
+    "expected": "Button label updates dynamically to 'PAY NOW' when Pay Online is selected; button label updates correctly on every payment method toggle",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_082",
+    "desc": "Fill all mandatory fields, select Cash on Delivery, click 'PLACE ORDER' — verify processing modal appears",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory Shipping Address fields with valid data\n3. Scroll down to Payment Method\n4. Select 'Cash on Delivery'\n5. Click 'PLACE ORDER' button\n6. Observe immediate response",
+    "expected": "Processing modal appears with message: 'Please wait as we are processing your order, this will only take a while'; modal includes a loading indicator; 'PLACE ORDER' button is disabled",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_083",
+    "desc": "After clicking PLACE ORDER (COD) — verify 'Verify Your Mobile Number' OTP modal appears",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory fields with valid data\n3. Select Cash on Delivery\n4. Click PLACE ORDER\n5. Wait for processing modal to complete\n6. Observe OTP verification modal",
+    "expected": "OTP verification modal titled 'Verify Your Mobile Number' appears; modal contains: instruction text mentioning masked phone number (e.g., +91XXXXXX48), 4-digit OTP input boxes, 'Resend a new OTP in X seconds' countdown timer, and 'CONFIRM AND PLACE ORDER' button",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_084",
+    "desc": "Verify OTP modal displays masked registered phone number correctly",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields with valid data including Phone Number\n3. Select Cash on Delivery and click PLACE ORDER\n4. Wait for OTP modal to appear\n5. Verify the phone number shown in modal matches registered number (masked format)",
+    "expected": "OTP modal displays phone number in masked format (e.g., +91XXXXXX48 — only last 2 digits visible); masked number matches the phone entered in Shipping Address field",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_085",
+    "desc": "Enter valid 4-digit OTP and click 'CONFIRM AND PLACE ORDER' — verify order placed successfully",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields, select COD, click PLACE ORDER\n3. Wait for OTP modal to appear\n4. Enter the valid 4-digit OTP received on registered phone\n5. Click 'CONFIRM AND PLACE ORDER' button\n6. Observe result",
+    "expected": "Order is confirmed; OTP modal closes; user is redirected to success page displaying 'Thank You For The Purchase!' message; confirmation email notification shown",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_086",
+    "desc": "Enter invalid/wrong OTP in OTP verification modal — verify error message displayed",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields, select COD, click PLACE ORDER\n3. Wait for OTP modal\n4. Enter an incorrect 4-digit OTP (e.g., '0000' or any OTP not matching the sent OTP)\n5. Click 'CONFIRM AND PLACE ORDER'\n6. Observe error handling",
+    "expected": "Error message displayed in OTP modal: 'Invalid OTP. Please try again.' or similar; OTP input fields cleared or highlighted in red; order is NOT placed; modal remains open",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_087",
+    "desc": "Leave OTP fields empty and click 'CONFIRM AND PLACE ORDER' — verify validation error",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields, select COD, click PLACE ORDER\n3. Wait for OTP modal\n4. Do NOT enter any OTP — leave all 4 input boxes empty\n5. Click 'CONFIRM AND PLACE ORDER'\n6. Observe validation response",
+    "expected": "Validation error displayed: 'Please enter OTP' or 'OTP is required'; CONFIRM button does not proceed; order is NOT placed",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_088",
+    "desc": "Verify 'Resend OTP' countdown timer is displayed in OTP modal",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields, select COD, click PLACE ORDER\n3. Wait for OTP modal to appear\n4. Observe the resend OTP timer text\n5. Wait and observe timer countdown",
+    "expected": "OTP modal displays 'Resend a new OTP in X seconds' countdown (starts at ~94 seconds per video); timer counts down each second; 'Resend' option is disabled/greyed out while timer is active",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_089",
+    "desc": "Click 'Resend OTP' after countdown expires — verify new OTP is sent",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all fields, select COD, click PLACE ORDER\n3. Wait for OTP modal\n4. Wait for countdown timer to expire (reach 0 seconds)\n5. Click 'Resend a new OTP' link/button\n6. Observe toast or confirmation that new OTP was sent",
+    "expected": "After timer expires, 'Resend OTP' becomes clickable/active; clicking it sends a new OTP to the registered phone; timer resets; confirmation message: 'OTP has been resent to +91XXXXXX48'",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_090",
+    "desc": "Verify 'Thank You For The Purchase!' success page displayed after COD order with valid OTP",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory fields with valid data\n3. Select Cash on Delivery\n4. Click PLACE ORDER → process → enter valid OTP → click CONFIRM AND PLACE ORDER\n5. Observe success page",
+    "expected": "Success page displays: 'Thank You For The Purchase!'; sub-message: 'Confirmation Mail Has Been Sent To Your Mail Id'; 'We Hope You Enjoy Your Purchase'; green checkmark icon; 'CONTINUE SHOPPING' button is visible",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_091",
+    "desc": "Click 'CONTINUE SHOPPING' on success page — verify navigation to home or PLP page",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Complete a successful COD order (as per TC_CHECKOUT_VIDEO_15)\n2. On success page, click 'CONTINUE SHOPPING' button\n3. Observe navigation destination",
+    "expected": "User is redirected to the Home page or All Jewellery PLP (/jewellery); cart icon shows 0 items; previous order is no longer in cart",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_092",
+    "desc": "Cart total below ₹49,000 — verify both 'Cash on Delivery' and 'Pay Online' payment options are displayed",
+    "preconditions": "User is logged in; cart contains 18K Rose Gold Eden Diamond Ring (₹24,430) — total below ₹49,000 threshold",
+    "steps": "1. Login to https://qa-sunnydiamonds.webc.in\n2. Navigate to /jewellery PLP\n3. Add '18K Rose Gold Eden Diamond Ring' (₹24,430) to cart (qty=1, total < ₹49,000)\n4. Go to Cart → click 'CHECKOUT SECURELY'\n5. Scroll down to Payment Method section\n6. Observe all payment options displayed",
+    "expected": "Both payment options are visible:\n• 'Cash on Delivery' radio button — enabled and selectable\n• 'Pay Online (Secure payment via Razorpay)' radio button — enabled\nCOD option is NOT hidden or disabled when cart total < ₹49,000",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_093",
+    "desc": "Cart total below ₹49,000 — select 'Cash on Delivery' — verify button label shows 'PLACE ORDER'",
+    "preconditions": "User is logged in; cart total < ₹49,000 (e.g., 18K Rose Gold Eden Diamond Ring ₹24,430)",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout (cart total < ₹49,000)\n2. Scroll to Payment Method section\n3. Click 'Cash on Delivery' radio button\n4. Observe submit button label",
+    "expected": "Cash on Delivery radio button is selectable; submit button label changes to 'PLACE ORDER'; Pay Online radio becomes deselected",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_094",
+    "desc": "Cart total below ₹49,000 — select 'Pay Online' — verify button label shows 'PAY NOW'",
+    "preconditions": "User is logged in; cart total < ₹49,000",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout (cart total < ₹49,000)\n2. Scroll to Payment Method section\n3. Click 'Pay Online' radio button\n4. Observe submit button label",
+    "expected": "Pay Online radio is selectable; submit button label shows 'PAY NOW'; Razorpay payment gateway is triggered on click",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_095",
+    "desc": "Cart total above ₹49,000 — verify 'Cash on Delivery' option is NOT displayed on checkout",
+    "preconditions": "User is logged in; cart contains items with total > ₹49,000 (e.g., 18K Rose Gold Eden Diamond Ring qty=3, total ₹73,290)",
+    "steps": "1. Login to https://qa-sunnydiamonds.webc.in\n2. Add product(s) to cart with combined total exceeding ₹49,000 (e.g., same ring x3 = ₹73,290)\n3. Go to Cart → click 'CHECKOUT SECURELY'\n4. Scroll down to Payment Method section\n5. Observe available payment options",
+    "expected": "Only 'Pay Online (Secure payment via Razorpay)' is displayed in Payment Method section; 'Cash on Delivery' radio button is completely absent/hidden; submit button shows 'PAY NOW' only",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_096",
+    "desc": "Cart total above ₹49,000 — verify submit button shows 'PAY NOW' (not 'PLACE ORDER')",
+    "preconditions": "User is logged in; cart total > ₹49,000",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout (cart total > ₹49,000)\n2. Scroll to Payment Method section\n3. Observe the submit button label without selecting any payment method",
+    "expected": "Submit button displays 'PAY NOW'; 'PLACE ORDER' label does not appear at any point; only Pay Online is pre-selected or available",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_097",
+    "desc": "Cart total above ₹49,000 — verify COD option is hidden (not just disabled) from Payment Method section",
+    "preconditions": "User is logged in; cart total > ₹49,000",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout (cart total > ₹49,000)\n2. Scroll to Payment Method section\n3. Inspect DOM / page source for 'Cash on Delivery' element\n4. Verify COD is not present in UI or is hidden with display:none / visibility:hidden",
+    "expected": "Cash on Delivery option is not visible in the Payment Method section; if present in DOM it must be hidden (display:none or similar); user cannot interact with COD option",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_098",
+    "desc": "BVA: Cart total = ₹48,999 (just below ₹49,000 threshold) — verify COD IS available",
+    "preconditions": "User is logged in; cart items totalling exactly ₹48,999",
+    "steps": "1. Login and add products to cart such that total is ₹48,999\n2. Go to Cart → click 'CHECKOUT SECURELY'\n3. Scroll to Payment Method section\n4. Observe payment options",
+    "expected": "Both 'Cash on Delivery' and 'Pay Online' options are displayed; COD is selectable; cart total ₹48,999 is treated as below threshold",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_099",
+    "desc": "BVA: Cart total = ₹49,000 (exactly at threshold) — verify COD is NOT available",
+    "preconditions": "User is logged in; cart items totalling exactly ₹49,000",
+    "steps": "1. Login and add products to cart such that total is exactly ₹49,000\n2. Go to Cart → click 'CHECKOUT SECURELY'\n3. Scroll to Payment Method section\n4. Observe payment options",
+    "expected": "Only 'Pay Online' is displayed at exactly ₹49,000; Cash on Delivery is hidden; confirms threshold is >= ₹49,000 (inclusive boundary)",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_100",
+    "desc": "BVA: Cart total = ₹49,001 (just above ₹49,000 threshold) — verify COD is NOT available",
+    "preconditions": "User is logged in; cart items totalling ₹49,001",
+    "steps": "1. Login and add products to cart such that total is ₹49,001\n2. Go to Cart → click 'CHECKOUT SECURELY'\n3. Scroll to Payment Method section\n4. Observe payment options",
+    "expected": "Only 'Pay Online' is displayed; Cash on Delivery is hidden; confirms any amount above threshold restricts COD",
+    "testType": "Edge Case",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_101",
+    "desc": "Increase cart quantity from below to above ₹49,000 threshold — verify COD disappears on checkout",
+    "preconditions": "User is logged in; cart starts with 1 item (₹24,430) — below threshold",
+    "steps": "1. Login; add 18K Rose Gold Eden Diamond Ring (₹24,430 x1) to cart\n2. Navigate to Checkout → verify COD is visible (total < ₹49,000)\n3. Click 'Edit Cart' → increase quantity to 3 (total = ₹73,290 > ₹49,000)\n4. Observe 'Item Added to Cart' toast notification\n5. Click 'CHECKOUT SECURELY' → navigate back to Checkout\n6. Scroll to Payment Method section",
+    "expected": "After increasing qty to push total above ₹49,000: COD option is no longer displayed in Payment Method; only 'Pay Online' visible; button shows 'PAY NOW'; Order Summary reflects new total (₹73,290)",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_102",
+    "desc": "Decrease cart quantity from above to below ₹49,000 threshold — verify COD reappears on checkout",
+    "preconditions": "User is logged in; cart starts with 3 items (₹73,290) — above threshold",
+    "steps": "1. Login; add 18K Rose Gold Eden Diamond Ring (₹24,430 x3 = ₹73,290) to cart\n2. Navigate to Checkout → verify only Pay Online is shown (total > ₹49,000)\n3. Click 'Edit Cart' → decrease quantity to 1 (total = ₹24,430 < ₹49,000)\n4. Click 'CHECKOUT SECURELY' → navigate back to Checkout\n5. Scroll to Payment Method section",
+    "expected": "After reducing total below ₹49,000: Both 'Cash on Delivery' and 'Pay Online' options reappear; COD is selectable; Order Summary reflects reduced total (₹24,430)",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_103",
+    "desc": "Add a high-value product (single item > ₹49,000) to cart — verify COD not available on checkout",
+    "preconditions": "User is logged in; product with price above ₹49,000 (e.g., 18K Rose Gold Mix Diamond product ₹49,206)",
+    "steps": "1. Login to https://qa-sunnydiamonds.webc.in\n2. Navigate to PLP → add a single product priced above ₹49,000 (e.g., ₹49,206) to cart\n3. Go to Cart → total is above ₹49,000 with just 1 item\n4. Click 'CHECKOUT SECURELY'\n5. Scroll to Payment Method section",
+    "expected": "Even with a single item priced > ₹49,000: only 'Pay Online' is shown; COD option is hidden; confirms the rule applies to cart total regardless of item count",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_104",
+    "desc": "Remove the only item from Order Summary on Checkout page — verify page redirects to Cart page",
+    "preconditions": "User is logged in; Checkout page is open with exactly 1 item in Order Summary (18K Rose Gold Eden Diamond Ring ₹24,430)",
+    "steps": "1. Login to https://qa-sunnydiamonds.webc.in\n2. Add 1 product to cart and navigate to Checkout page (https://qa-sunnydiamonds.webc.in/checkout)\n3. Locate the item in the Order Summary section (top-right)\n4. Click the '×' (remove/delete) button on the item in Order Summary\n5. Observe the page behaviour after item removal",
+    "expected": "Page automatically redirects to the Cart page (https://qa-sunnydiamonds.webc.in/cart); URL changes to /cart; Cart page displays 'Your Cart is Empty' with an empty bag icon; user does not remain on Checkout page after removing the last item",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_105",
+    "desc": "Remove last item from Checkout Order Summary — verify 'Item Removed from Cart' toast notification is displayed on Cart page",
+    "preconditions": "User is logged in; Checkout page is open with exactly 1 item in Order Summary",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout with 1 item in cart\n2. Click the '×' remove button on the item in Order Summary\n3. Observe the toast notification after redirect to Cart page",
+    "expected": "After redirect to Cart page, a toast notification appears at the bottom of the page with message 'Item Removed from Cart'; toast is visible for a few seconds then auto-dismisses",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_106",
+    "desc": "After redirect to empty Cart page — verify 'Your Cart is Empty' message and empty bag icon are displayed",
+    "preconditions": "User has been redirected to Cart page after removing last item from Checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout with 1 item in cart\n2. Click '×' on item in Order Summary\n3. After redirect to Cart page, observe all UI elements",
+    "expected": "Cart page displays:\n• Empty bag/cart icon (visual illustration)\n• Heading: 'Your Cart is Empty'\n• Sub-text: 'Looks like you haven't added anything yet. Browse our collection and find something you love.'\n• 'EXPLORE PRODUCTS' button is visible and clickable",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_107",
+    "desc": "Click 'EXPLORE PRODUCTS' button on empty Cart page — verify navigation to Jewellery PLP",
+    "preconditions": "User is on empty Cart page after removing last item from Checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout with 1 item in cart\n2. Click '×' on item in Order Summary → redirected to empty Cart page\n3. Click 'EXPLORE PRODUCTS' button\n4. Observe navigation destination",
+    "expected": "User is navigated to the Jewellery PLP page (/jewellery or /all-jewellery); product listings are displayed; URL changes to the PLP URL",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_108",
+    "desc": "Remove last item from Checkout — verify cart icon in header updates to show 0 items",
+    "preconditions": "User is logged in; Checkout page open with 1 item; cart icon shows count = 1",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout with 1 item in cart\n2. Note cart icon count in header (should show 1)\n3. Click '×' remove button on item in Order Summary\n4. After redirect to Cart page, observe cart icon in header",
+    "expected": "Cart icon in the header updates to show 0 items (badge removed or shows 0); cart count reflects the empty state immediately after item removal",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_109",
+    "desc": "Remove one item from Order Summary when multiple items exist — verify page stays on Checkout (no redirect)",
+    "preconditions": "User is logged in; Checkout page open with 2 or more items in Order Summary",
+    "steps": "1. Login; add 2 different products to cart\n2. Navigate to Checkout page\n3. In Order Summary, click '×' to remove only 1 of the 2 items\n4. Observe page behaviour",
+    "expected": "Page does NOT redirect to Cart page; user remains on Checkout page; Order Summary updates to show only the remaining item; Subtotal and Total recalculate correctly; redirect only happens when ALL items are removed",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_110",
+    "desc": "Remove all items one by one from Order Summary (2 items) — verify redirect happens only after last item removed",
+    "preconditions": "User is logged in; Checkout page open with 2 items in Order Summary",
+    "steps": "1. Login; add 2 products to cart → navigate to Checkout\n2. Click '×' to remove the first item from Order Summary\n3. Verify page stays on Checkout with 1 item remaining\n4. Click '×' to remove the second (last) item\n5. Observe page behaviour",
+    "expected": "After removing first item: page stays on Checkout, Order Summary shows 1 item;\nAfter removing second (last) item: page immediately redirects to Cart page; 'Your Cart is Empty' displayed; 'Item Removed from Cart' toast shown",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_111",
+    "desc": "After redirect to empty Cart page — press browser back button — verify Checkout page does not reload with removed item",
+    "preconditions": "User has been redirected to empty Cart page after removing last item from Checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout with 1 item in cart\n2. Click '×' to remove item → redirected to empty Cart page\n3. Press browser Back button\n4. Observe what page loads and whether removed item reappears",
+    "expected": "Browser Back navigates to previous page (e.g., PDP or PLP); if Checkout page loads, Order Summary must be empty (item should NOT reappear); cart remains empty — no ghost data from removed item",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_112",
+    "desc": "After redirect to empty Cart page — refresh browser — verify empty cart state is maintained",
+    "preconditions": "User is on Cart page showing 'Your Cart is Empty' after redirect from Checkout",
+    "steps": "1. Navigate back to https://qa-sunnydiamonds.webc.in/checkout with 1 item → remove item → redirected to empty Cart page\n2. Press F5 / browser refresh\n3. Observe page after reload",
+    "expected": "Page reloads showing 'Your Cart is Empty'; cart remains empty after refresh; removed item does not reappear; 'EXPLORE PRODUCTS' button still present",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_113",
+    "desc": "[Positive] Guest user clicks CONTINUE AS GUEST on Login page — verify navigation to Checkout page",
+    "preconditions": "User is NOT logged in; at least 1 product in cart; user is on Login page (redirected from cart)",
+    "steps": "1. Ensure user is logged out (incognito or clear session)\n2. Add a product to cart and click CHECKOUT SECURELY\n3. Land on Login page\n4. Click CONTINUE AS GUEST button\n5. Observe navigation and URL",
+    "expected": "User navigates to https://qa-sunnydiamonds.webc.in/checkout without credentials; full Checkout page loads with Shipping Address form and Order Summary; URL is /checkout; no login-required errors",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_114",
+    "desc": "[Positive] Guest Checkout page — verify all sections visible (Shipping Address, Order Summary, Payment)",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST\n2. Verify sections: Shipping Address form (9 fields), Coupon Code, Gift Card, Payment Method (COD + Pay Online), Order Summary, PAY NOW/PLACE ORDER button",
+    "expected": "All sections render correctly for guest; 9 mandatory fields present with asterisks (*); Order Summary shows cart items; Payment Method shows options based on cart total; no errors",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_115",
+    "desc": "[Positive] Guest fills all 9 mandatory Shipping Address fields with valid data — verify no errors",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter: First Name=John, Last Name=Doe, Email=johndoe@gmail.com\n3. Enter: Phone=9876543210, Address=123 Main Street\n4. Enter: Pin Code=682001, City=Kochi\n5. Select: State=Kerala (Country defaults to India)\n6. Observe all fields accept input without errors",
+    "expected": "All 9 mandatory fields accept valid input; no validation errors shown; form is ready for order submission; email used for order confirmation",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_116",
+    "desc": "[Positive] Guest cart total < Rs.49,000 — verify Cash on Delivery option is available",
+    "preconditions": "User is NOT logged in; cart total < Rs.49,000 (e.g. Aminah Diamond Ring Rs.30,094); guest is on https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST",
+    "steps": "1. As guest, add product with price < Rs.49,000 to cart\n2. Proceed to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST\n3. Scroll to Payment Method section\n4. Observe available payment options",
+    "expected": "Both Cash on Delivery and Pay Online options are visible; COD is selectable for guest when cart < Rs.49,000; selecting COD changes button label from PAY NOW to PLACE ORDER",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_117",
+    "desc": "[Positive] Guest clicks PLACE ORDER (COD) — verify Processing order modal displayed",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; all mandatory fields filled; Cash on Delivery selected",
+    "steps": "1. As guest, fill all mandatory Shipping Address fields with valid data\n2. Select Cash on Delivery\n3. Click PLACE ORDER button\n4. Observe immediate system response",
+    "expected": "Processing modal appears: 'Please wait as we are processing your order, this will only take a while'; loading spinner displayed; PLACE ORDER button is disabled during processing",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_118",
+    "desc": "[Positive] Guest COD order — verify Verify Your Mobile Number OTP modal appears",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; PLACE ORDER clicked; processing modal completed",
+    "steps": "1. As guest, fill all fields; select COD; click PLACE ORDER\n2. Wait for processing modal to complete\n3. Observe OTP modal",
+    "expected": "Verify Your Mobile Number OTP modal appears; modal shows masked phone (e.g. +91XXXXXX10); 4-digit OTP input boxes; Resend a new OTP in X seconds timer; CONFIRM AND PLACE ORDER button",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_119",
+    "desc": "[Positive] Guest enters valid OTP and clicks CONFIRM AND PLACE ORDER — verify Thank You page",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; OTP verification modal is open; valid OTP received on phone",
+    "steps": "1. As guest, complete checkout up to OTP modal\n2. Enter valid 4-digit OTP received on phone\n3. Click CONFIRM AND PLACE ORDER\n4. Observe result",
+    "expected": "Order confirmed; Thank You For The Purchase! success page displayed; Confirmation Mail Has Been Sent To Your Mail Id shown; CONTINUE SHOPPING button visible; confirmation email sent to guest-provided email",
+    "testType": "Positive",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_120",
+    "desc": "[Positive] Guest selects Pay Online — verify PAY NOW button appears and Razorpay gateway loads",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill all mandatory Shipping Address fields\n3. Scroll to Payment Method\n4. Select Pay Online radio button\n5. Click PAY NOW\n6. Observe Razorpay gateway behaviour",
+    "expected": "Pay Online selectable for guest; button shows PAY NOW; clicking PAY NOW opens Razorpay payment gateway popup; guest can complete online payment without an account",
+    "testType": "Positive",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_121",
+    "desc": "[Positive] Login page shows Sign Up link during guest checkout — verify navigation to Registration page",
+    "preconditions": "User is NOT logged in; user is on Login page (redirected from cart/checkout)",
+    "steps": "1. As guest, add product to cart and click CHECKOUT SECURELY\n2. Land on Login page\n3. Click Don't have an account? Sign up link\n4. Observe navigation",
+    "expected": "User navigated to Registration/Create Account page; guest can choose to register before completing checkout; cart items preserved after registration",
+    "testType": "Positive",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_122",
+    "desc": "[Negative] Guest accesses /checkout URL directly with empty cart — verify redirect to Login page",
+    "preconditions": "User is NOT logged in; cart is empty",
+    "steps": "1. Ensure user is logged out and cart is empty\n2. Directly type https://qa-sunnydiamonds.webc.in/checkout in browser address bar and press Enter\n3. Observe page response",
+    "expected": "User is redirected to Login page; checkout does not load for guest with empty cart; CONTINUE AS GUEST option shown; no unhandled error or blank page",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_123",
+    "desc": "[Negative] Guest submits Checkout form with all mandatory fields empty — verify 9 field-level errors",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST\n2. Leave all 9 Shipping Address fields empty\n3. Select any payment method\n4. Click PAY NOW / PLACE ORDER\n5. Observe validation errors",
+    "expected": "Validation errors shown near all 9 mandatory fields; errors include: First Name is required, Last Name is required, Email is required, Phone is required, Address is required, Pin Code is required, City is required, State is required; form does not submit",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_124",
+    "desc": "[Negative] Guest enters invalid email format (missing @) — verify error message shown",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'invalidemail' (no @ symbol) in Email field\n3. Tab out or click PAY NOW\n4. Observe validation",
+    "expected": "Error near Email field: 'Invalid email address' or 'Please enter a valid email'; form does not submit; guest email is critical — used for order confirmation",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_125",
+    "desc": "[Negative] Guest enters phone number with fewer than 10 digits — verify error shown",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter '12345' (5 digits) in Phone Number field\n3. Tab out or click PAY NOW\n4. Observe validation",
+    "expected": "Error near Phone field: 'Please enter a valid 10-digit phone number'; form does not submit; OTP cannot be sent to invalid phone number",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_126",
+    "desc": "[Negative] Guest enters alphabetic characters in Pin Code — verify error shown",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'ABCDEF' in Pin Code field\n3. Tab out or click PAY NOW\n4. Observe validation",
+    "expected": "Error near Pin Code: 'Please enter a valid 6-digit PIN code'; alphabetic input is rejected; same validation as logged-in checkout",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_127",
+    "desc": "[Negative] Guest enters invalid OTP in OTP verification modal — verify error and order NOT placed",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; OTP verification modal is open after clicking PLACE ORDER (COD)",
+    "steps": "1. As guest, fill all fields; select COD; click PLACE ORDER\n2. Wait for OTP modal\n3. Enter incorrect 4-digit OTP (e.g. '0000')\n4. Click CONFIRM AND PLACE ORDER\n5. Observe error handling",
+    "expected": "Error message in OTP modal: 'Invalid OTP. Please try again'; order is NOT placed; OTP fields reset or highlighted; modal stays open for retry",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_128",
+    "desc": "[Negative] Guest leaves OTP fields empty and clicks CONFIRM AND PLACE ORDER — verify validation",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; OTP verification modal is open",
+    "steps": "1. As guest, reach OTP modal\n2. Leave all 4 OTP input boxes empty\n3. Click CONFIRM AND PLACE ORDER\n4. Observe validation",
+    "expected": "Validation error: 'Please enter OTP' or 'OTP is required'; OTP fields highlighted; order is NOT placed",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_129",
+    "desc": "[Negative] Guest cart total > Rs.49,000 — verify Cash on Delivery option is NOT available",
+    "preconditions": "User is NOT logged in; cart total > Rs.49,000 (e.g. diamond jewellery item); guest is on https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST",
+    "steps": "1. As guest, add product(s) with total > Rs.49,000 to cart\n2. Proceed to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST\n3. Scroll to Payment Method section\n4. Observe available payment options",
+    "expected": "Only Pay Online is shown in Payment Method; Cash on Delivery is absent; button shows PAY NOW; Rs.49,000 COD restriction applies equally to guest checkout",
+    "testType": "Negative",
+    "priority": "Critical"
+  },
+  {
+    "tcId": "TC_CHECKOUT_130",
+    "desc": "[Negative] Guest enters special characters in First Name (e.g. John@#) — verify rejection",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'John@#' in First Name field\n3. Tab out\n4. Observe validation",
+    "expected": "First Name rejects special characters; error: 'First Name should contain alphabets only'; same alpha-only rule applies to guest checkout form",
+    "testType": "Negative",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_131",
+    "desc": "[Edge Case] Guest enters email of existing registered account — verify no silent account merge",
+    "preconditions": "Guest is on https://qa-sunnydiamonds.webc.in/checkout; account exists for sreejith.s+4@webandcrafts.com",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Enter 'sreejith.s+4@webandcrafts.com' (existing account email) in Email field\n3. Fill remaining fields and attempt to place order\n4. Observe system response",
+    "expected": "System either: (a) allows guest order with existing email and sends confirmation, OR (b) prompts user to sign in; must NOT silently merge or modify existing account data; no unhandled error",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_132",
+    "desc": "[Edge Case] Guest refreshes Checkout page after partially filling address — verify form data handling",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; shipping address form is partially filled",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Fill First Name, Last Name, Email, Phone fields\n3. Press F5 / browser refresh\n4. Observe form state after reload",
+    "expected": "After refresh: form data preserved via browser autofill or session storage, OR user notified that data will be lost; cart and Order Summary remain intact; no unhandled error or blank page",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_133",
+    "desc": "[Edge Case] Guest clicks browser Back from Checkout — verify return to Cart page with CHECKOUT SECURELY",
+    "preconditions": "Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST",
+    "steps": "1. As guest, proceed to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST\n2. Click browser Back button\n3. Observe page navigated to\n4. Check CHECKOUT SECURELY button availability",
+    "expected": "Browser back navigates to Cart page; cart items still displayed; CHECKOUT SECURELY button still present and functional; clicking CHECKOUT SECURELY re-shows Login page with CONTINUE AS GUEST",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_134",
+    "desc": "[Edge Case] Guest removes last item from Order Summary — verify redirect to empty Cart page",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page with exactly 1 item in cart",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout with 1 item\n2. In Order Summary, click the X / remove button on the only item\n3. Observe page behaviour",
+    "expected": "Item removed; page redirects to Cart page showing empty cart or EXPLORE PRODUCTS button; Item Removed from Cart toast displayed; redirect behaviour for guest matches logged-in user (S001)",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_135",
+    "desc": "[Edge Case] Guest session expires while filling Checkout form — verify graceful handling",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; session token expires during form fill",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout\n2. Begin filling address form\n3. Clear session cookies via DevTools (F12 > Application > Cookies > Clear All)\n4. Attempt to click PAY NOW / PLACE ORDER\n5. Observe system response",
+    "expected": "System handles expired guest session gracefully; redirects to Login page with message OR re-establishes guest session; no HTTP 500 error or blank screen; form data not permanently lost",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_136",
+    "desc": "[Edge Case] Guest resends OTP after countdown expires — verify new OTP sent and old OTP invalidated",
+    "preconditions": "User is NOT logged in (guest/incognito mode); at least 1 product added to cart; Guest navigated to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST on Login page; OTP modal is open; countdown timer has reached 0",
+    "steps": "1. As guest, reach OTP modal (COD flow)\n2. Wait for countdown timer to expire (~94 seconds)\n3. Click Resend a new OTP link\n4. Enter the old (expired) OTP → observe error\n5. Enter the new OTP → observe success",
+    "expected": "After timer expires, Resend OTP becomes clickable; new OTP sent to guest phone; timer resets; old OTP returns 'Invalid OTP' error; new OTP allows order placement",
+    "testType": "Edge Case",
+    "priority": "High"
+  },
+  {
+    "tcId": "TC_CHECKOUT_137",
+    "desc": "[Edge Case] Guest opens Checkout in two browser tabs simultaneously — verify no duplicate order",
+    "preconditions": "Guest has completed shipping form and selected COD in Tab 1; same cart open in Tab 2",
+    "steps": "1. As guest, navigate to https://qa-sunnydiamonds.webc.in/checkout via CONTINUE AS GUEST\n2. Open a second tab and navigate to same https://qa-sunnydiamonds.webc.in/checkout\n3. Fill address and submit order from Tab 1\n4. Without refreshing, also click PLACE ORDER from Tab 2\n5. Observe whether duplicate orders are created",
+    "expected": "Only one order is created; second submission fails gracefully or is blocked by session lock; no duplicate charges or orders placed",
+    "testType": "Edge Case",
+    "priority": "Medium"
+  },
+  {
+    "tcId": "TC_CHECKOUT_138",
+    "desc": "Valid Login — Verify authenticated user (sreejith.s+4@webandcrafts.com) can access and complete Checkout page",
+    "preconditions": "User is logged in (sreejith.s+4@webandcrafts.com / Password); at least 1 product in cart; Checkout page open at https://qa-sunnydiamonds.webc.in/checkout",
+    "steps": "1. Open https://qa-sunnydiamonds.webc.in/login\n2. Enter email: sreejith.s+4@webandcrafts.com\n3. Enter password: Password\n4. Click Login\n5. Navigate to /jewellery PLP\n6. Add 2 products to cart\n7. Go to Cart and click CHECKOUT SECURELY\n8. Verify Checkout page loads with all sections: Shipping Address, Order Summary, Coupon, Payment\n9. Fill all mandatory fields with valid data\n10. Click PAY NOW",
+    "expected": "Authenticated user successfully reaches and completes the checkout page; all sections load correctly; order placed successfully with valid credentials",
+    "testType": "Positive",
+    "priority": "Critical"
+  }
+]
