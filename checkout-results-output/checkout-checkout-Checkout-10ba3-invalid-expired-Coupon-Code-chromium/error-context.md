@@ -1,0 +1,684 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e7]:
+      - link "Sunny Diamonds Celebrates The \"Season of Sparkle\" from October 15th to November 15th.!" [ref=e8] [cursor=pointer]:
+        - /url: jewellery
+        - generic [ref=e9]: Sunny Diamonds Celebrates The "Season of Sparkle" from October 15th to November 15th.!
+      - generic [ref=e10]:
+        - link "Store Locator" [ref=e11] [cursor=pointer]:
+          - /url: /locations
+          - generic [ref=e12]: Store Locator
+        - link "Order Tracking" [ref=e13] [cursor=pointer]:
+          - /url: /sales/guest/form
+          - generic [ref=e14]: Order Tracking
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - link "Sunny Diamonds" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - img "Sunny Diamonds" [ref=e19]
+          - button "Close menu" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+        - navigation [ref=e24]:
+          - generic [ref=e25]:
+            - button "ALL JEWELLERY" [ref=e26] [cursor=pointer]:
+              - generic [ref=e27]: ALL JEWELLERY
+              - img [ref=e28]
+            - generic:
+              - generic:
+                - link "All" [ref=e30] [cursor=pointer]:
+                  - /url: /jewellery
+                - generic [ref=e31]:
+                  - button "Category" [ref=e32] [cursor=pointer]:
+                    - generic [ref=e33]: Category
+                    - img [ref=e34]
+                  - generic:
+                    - generic:
+                      - link "EARRINGS" [ref=e36] [cursor=pointer]:
+                        - /url: /jewellery/earrings
+                      - link "NOSEPINS" [ref=e37] [cursor=pointer]:
+                        - /url: /jewellery/nosepins
+                      - link "RINGS" [ref=e38] [cursor=pointer]:
+                        - /url: /jewellery/rings
+                      - link "PENDANTS" [ref=e39] [cursor=pointer]:
+                        - /url: /jewellery/pendants
+                      - link "NECKLACE" [ref=e40] [cursor=pointer]:
+                        - /url: /jewellery/necklace
+                      - link "BRACELETS" [ref=e41] [cursor=pointer]:
+                        - /url: /jewellery/bracelets
+                      - link "BANGLES" [ref=e42] [cursor=pointer]:
+                        - /url: /jewellery/bangles
+                - generic [ref=e43]:
+                  - button "Metal color" [ref=e44] [cursor=pointer]:
+                    - generic [ref=e45]: Metal color
+                    - img [ref=e46]
+                  - generic:
+                    - generic:
+                      - link "Yellow gold" [ref=e48] [cursor=pointer]:
+                        - /url: /jewellery?variants.color=yellow-gold
+                      - link "Rose gold" [ref=e49] [cursor=pointer]:
+                        - /url: /jewellery?variants.color=rose-gold
+                      - link "White gold" [ref=e50] [cursor=pointer]:
+                        - /url: /jewellery?variants.color=white-gold
+                - generic [ref=e51]:
+                  - button "Metal purity" [ref=e52] [cursor=pointer]:
+                    - generic [ref=e53]: Metal purity
+                    - img [ref=e54]
+                  - generic:
+                    - generic:
+                      - link "22K" [ref=e56] [cursor=pointer]:
+                        - /url: /jewellery?variants.metal_purity=22k
+                      - link "18K" [ref=e57] [cursor=pointer]:
+                        - /url: /jewellery?variants.metal_purity=18k
+                - generic [ref=e58]:
+                  - button "Price" [ref=e59] [cursor=pointer]:
+                    - generic [ref=e60]: Price
+                    - img [ref=e61]
+                  - generic:
+                    - generic:
+                      - link "Below ₹10k" [ref=e63] [cursor=pointer]:
+                        - /url: /jewellery?range=0TO10000
+                      - link "₹10k - ₹30k" [ref=e64] [cursor=pointer]:
+                        - /url: /jewellery?range=10000TO30000
+                      - link "₹30k - ₹50k" [ref=e65] [cursor=pointer]:
+                        - /url: /jewellery?range=30000TO50000
+                      - link "₹50k - ₹80k" [ref=e66] [cursor=pointer]:
+                        - /url: /jewellery?range=50000TO80000
+                      - link "Above ₹80k" [ref=e67] [cursor=pointer]:
+                        - /url: /jewellery?range=80000TO10000000
+                - generic [ref=e68]:
+                  - button "Explore" [ref=e69] [cursor=pointer]:
+                    - generic [ref=e70]: Explore
+                    - img [ref=e71]
+                  - generic:
+                    - generic:
+                      - link "Solitaire" [ref=e73] [cursor=pointer]:
+                        - /url: /jewellery?query=solitaire
+                      - link "Trending" [ref=e74] [cursor=pointer]:
+                        - /url: /trending
+          - generic [ref=e75]:
+            - button "EARRINGS" [ref=e76] [cursor=pointer]:
+              - generic [ref=e77]: EARRINGS
+              - img [ref=e78]
+            - generic:
+              - generic:
+                - link "All" [ref=e80] [cursor=pointer]:
+                  - /url: /jewellery/earrings
+                - generic [ref=e81]:
+                  - button "Metal color" [ref=e82] [cursor=pointer]:
+                    - generic [ref=e83]: Metal color
+                    - img [ref=e84]
+                  - generic:
+                    - generic:
+                      - link "Yellow gold" [ref=e86] [cursor=pointer]:
+                        - /url: /jewellery/earrings?variants.color=yellow-gold
+                      - link "Rose gold" [ref=e87] [cursor=pointer]:
+                        - /url: /jewellery/earrings?variants.color=rose-gold
+                      - link "White gold" [ref=e88] [cursor=pointer]:
+                        - /url: /jewellery/earrings?variants.color=white-gold
+                - generic [ref=e89]:
+                  - button "Metal purity" [ref=e90] [cursor=pointer]:
+                    - generic [ref=e91]: Metal purity
+                    - img [ref=e92]
+                  - generic:
+                    - generic:
+                      - link "22K" [ref=e94] [cursor=pointer]:
+                        - /url: /jewellery/earrings?variants.metal_purity=22k
+                      - link "18K" [ref=e95] [cursor=pointer]:
+                        - /url: /jewellery/earrings?variants.metal_purity=18k
+                - generic [ref=e96]:
+                  - button "Price" [ref=e97] [cursor=pointer]:
+                    - generic [ref=e98]: Price
+                    - img [ref=e99]
+                  - generic:
+                    - generic:
+                      - link "Below ₹10k" [ref=e101] [cursor=pointer]:
+                        - /url: /jewellery/earrings?range=0TO10000
+                      - link "₹10k - ₹30k" [ref=e102] [cursor=pointer]:
+                        - /url: /jewellery/earrings?range=10000TO30000
+                      - link "₹30k - ₹50k" [ref=e103] [cursor=pointer]:
+                        - /url: /jewellery/earrings?range=30000TO50000
+                      - link "₹50k - ₹80k" [ref=e104] [cursor=pointer]:
+                        - /url: /jewellery/earrings?range=50000TO80000
+                      - link "Above ₹80k" [ref=e105] [cursor=pointer]:
+                        - /url: /jewellery/earrings?range=80000TO10000000
+                - generic [ref=e106]:
+                  - button "Explore" [ref=e107] [cursor=pointer]:
+                    - generic [ref=e108]: Explore
+                    - img [ref=e109]
+                  - generic:
+                    - generic:
+                      - link "Solitaire" [ref=e111] [cursor=pointer]:
+                        - /url: /jewellery?query=solitaire
+                      - link "Trending" [ref=e112] [cursor=pointer]:
+                        - /url: /trending
+          - generic [ref=e113]:
+            - button "NOSEPINS" [ref=e114] [cursor=pointer]:
+              - generic [ref=e115]: NOSEPINS
+              - img [ref=e116]
+            - generic:
+              - generic:
+                - link "All" [ref=e118] [cursor=pointer]:
+                  - /url: /jewellery/nosepins
+                - generic [ref=e119]:
+                  - button "Metal color" [ref=e120] [cursor=pointer]:
+                    - generic [ref=e121]: Metal color
+                    - img [ref=e122]
+                  - generic:
+                    - generic:
+                      - link "Yellow gold" [ref=e124] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?variants.color=yellow-gold
+                      - link "Rose gold" [ref=e125] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?variants.color=rose-gold
+                      - link "White gold" [ref=e126] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?variants.color=white-gold
+                - generic [ref=e127]:
+                  - button "Metal purity" [ref=e128] [cursor=pointer]:
+                    - generic [ref=e129]: Metal purity
+                    - img [ref=e130]
+                  - generic:
+                    - generic:
+                      - link "22K" [ref=e132] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?variants.metal_purity=22k
+                      - link "18K" [ref=e133] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?variants.metal_purity=18k
+                - generic [ref=e134]:
+                  - button "Price" [ref=e135] [cursor=pointer]:
+                    - generic [ref=e136]: Price
+                    - img [ref=e137]
+                  - generic:
+                    - generic:
+                      - link "Below ₹10k" [ref=e139] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?range=0TO10000
+                      - link "₹10k - ₹30k" [ref=e140] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?range=10000TO30000
+                      - link "₹30k - ₹50k" [ref=e141] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?range=30000TO50000
+                      - link "₹50k - ₹80k" [ref=e142] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?range=50000TO80000
+                      - link "Above ₹80k" [ref=e143] [cursor=pointer]:
+                        - /url: /jewellery/nosepins?range=80000TO10000000
+                - generic [ref=e144]:
+                  - button "Explore" [ref=e145] [cursor=pointer]:
+                    - generic [ref=e146]: Explore
+                    - img [ref=e147]
+                  - generic:
+                    - generic:
+                      - link "Solitaire" [ref=e149] [cursor=pointer]:
+                        - /url: /jewellery?query=solitaire
+                      - link "Trending" [ref=e150] [cursor=pointer]:
+                        - /url: /trending
+          - generic [ref=e151]:
+            - button "RINGS" [ref=e152] [cursor=pointer]:
+              - generic [ref=e153]: RINGS
+              - img [ref=e154]
+            - generic:
+              - generic:
+                - link "All" [ref=e156] [cursor=pointer]:
+                  - /url: /jewellery/rings
+                - generic [ref=e157]:
+                  - button "Metal color" [ref=e158] [cursor=pointer]:
+                    - generic [ref=e159]: Metal color
+                    - img [ref=e160]
+                  - generic:
+                    - generic:
+                      - link "Yellow gold" [ref=e162] [cursor=pointer]:
+                        - /url: /jewellery/rings?variants.color=yellow-gold
+                      - link "Rose gold" [ref=e163] [cursor=pointer]:
+                        - /url: /jewellery/rings?variants.color=rose-gold
+                      - link "White gold" [ref=e164] [cursor=pointer]:
+                        - /url: /jewellery/rings?variants.color=white-gold
+                - generic [ref=e165]:
+                  - button "Metal purity" [ref=e166] [cursor=pointer]:
+                    - generic [ref=e167]: Metal purity
+                    - img [ref=e168]
+                  - generic:
+                    - generic:
+                      - link "22K" [ref=e170] [cursor=pointer]:
+                        - /url: /jewellery/rings?variants.metal_purity=22k
+                      - link "18K" [ref=e171] [cursor=pointer]:
+                        - /url: /jewellery/rings?variants.metal_purity=18k
+                - generic [ref=e172]:
+                  - button "Price" [ref=e173] [cursor=pointer]:
+                    - generic [ref=e174]: Price
+                    - img [ref=e175]
+                  - generic:
+                    - generic:
+                      - link "Below ₹10k" [ref=e177] [cursor=pointer]:
+                        - /url: /jewellery/rings?range=0TO10000
+                      - link "₹10k - ₹30k" [ref=e178] [cursor=pointer]:
+                        - /url: /jewellery/rings?range=10000TO30000
+                      - link "₹30k - ₹50k" [ref=e179] [cursor=pointer]:
+                        - /url: /jewellery/rings?range=30000TO50000
+                      - link "₹50k - ₹80k" [ref=e180] [cursor=pointer]:
+                        - /url: /jewellery/rings?range=50000TO80000
+                      - link "Above ₹80k" [ref=e181] [cursor=pointer]:
+                        - /url: /jewellery/rings?range=80000TO10000000
+                - generic [ref=e182]:
+                  - button "Explore" [ref=e183] [cursor=pointer]:
+                    - generic [ref=e184]: Explore
+                    - img [ref=e185]
+                  - generic:
+                    - generic:
+                      - link "Solitaire" [ref=e187] [cursor=pointer]:
+                        - /url: /jewellery?query=solitaire
+                      - link "Trending" [ref=e188] [cursor=pointer]:
+                        - /url: /trending
+          - generic [ref=e189]:
+            - button "PENDANTS" [ref=e190] [cursor=pointer]:
+              - generic [ref=e191]: PENDANTS
+              - img [ref=e192]
+            - generic:
+              - generic:
+                - link "All" [ref=e194] [cursor=pointer]:
+                  - /url: /jewellery/pendants
+                - generic [ref=e195]:
+                  - button "Metal color" [ref=e196] [cursor=pointer]:
+                    - generic [ref=e197]: Metal color
+                    - img [ref=e198]
+                  - generic:
+                    - generic:
+                      - link "Yellow gold" [ref=e200] [cursor=pointer]:
+                        - /url: /jewellery/pendants?variants.color=yellow-gold
+                      - link "Rose gold" [ref=e201] [cursor=pointer]:
+                        - /url: /jewellery/pendants?variants.color=rose-gold
+                      - link "White gold" [ref=e202] [cursor=pointer]:
+                        - /url: /jewellery/pendants?variants.color=white-gold
+                - generic [ref=e203]:
+                  - button "Metal purity" [ref=e204] [cursor=pointer]:
+                    - generic [ref=e205]: Metal purity
+                    - img [ref=e206]
+                  - generic:
+                    - generic:
+                      - link "22K" [ref=e208] [cursor=pointer]:
+                        - /url: /jewellery/pendants?variants.metal_purity=22k
+                      - link "18K" [ref=e209] [cursor=pointer]:
+                        - /url: /jewellery/pendants?variants.metal_purity=18k
+                - generic [ref=e210]:
+                  - button "Price" [ref=e211] [cursor=pointer]:
+                    - generic [ref=e212]: Price
+                    - img [ref=e213]
+                  - generic:
+                    - generic:
+                      - link "Below ₹10k" [ref=e215] [cursor=pointer]:
+                        - /url: /jewellery/pendants?range=0TO10000
+                      - link "₹10k - ₹30k" [ref=e216] [cursor=pointer]:
+                        - /url: /jewellery/pendants?range=10000TO30000
+                      - link "₹30k - ₹50k" [ref=e217] [cursor=pointer]:
+                        - /url: /jewellery/pendants?range=30000TO50000
+                      - link "₹50k - ₹80k" [ref=e218] [cursor=pointer]:
+                        - /url: /jewellery/pendants?range=50000TO80000
+                      - link "Above ₹80k" [ref=e219] [cursor=pointer]:
+                        - /url: /jewellery/pendants?range=80000TO10000000
+                - generic [ref=e220]:
+                  - button "Explore" [ref=e221] [cursor=pointer]:
+                    - generic [ref=e222]: Explore
+                    - img [ref=e223]
+                  - generic:
+                    - generic:
+                      - link "Solitaire" [ref=e225] [cursor=pointer]:
+                        - /url: /jewellery?query=solitaire
+                      - link "Trending" [ref=e226] [cursor=pointer]:
+                        - /url: /trending
+          - link "GIFT CARDS" [ref=e228] [cursor=pointer]:
+            - /url: /gifts
+            - generic [ref=e229]: GIFT CARDS
+          - link "TRENDING" [ref=e231] [cursor=pointer]:
+            - /url: /trending
+            - generic [ref=e232]: TRENDING
+          - link "MONTHLY PLANS" [ref=e234] [cursor=pointer]:
+            - /url: https://dfe.sunnydiamonds.com/
+            - generic [ref=e235]: MONTHLY PLANS
+          - link "BRACELETS" [ref=e237] [cursor=pointer]:
+            - /url: /jewellery/bracelets
+            - generic [ref=e238]: BRACELETS
+          - link "BANGLES" [ref=e240] [cursor=pointer]:
+            - /url: /jewellery/bangles
+            - generic [ref=e241]: BANGLES
+          - link "NECKLACE" [ref=e243] [cursor=pointer]:
+            - /url: /jewellery/necklace
+            - generic [ref=e244]: NECKLACE
+          - link "STORE LOCATOR" [ref=e246] [cursor=pointer]:
+            - /url: /locations
+            - generic [ref=e247]: STORE LOCATOR
+          - link "ORDER TRACKING" [ref=e249] [cursor=pointer]:
+            - /url: /sales/guest/form
+            - generic [ref=e250]: ORDER TRACKING
+          - link "EDUCATION" [ref=e252] [cursor=pointer]:
+            - /url: /education/loose-diamonds/4cs/cut
+            - generic [ref=e253]: EDUCATION
+      - generic [ref=e255]:
+        - link "Sunny Diamonds" [ref=e258] [cursor=pointer]:
+          - /url: /
+          - img "Sunny Diamonds" [ref=e260]
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - generic [ref=e263] [cursor=pointer]:
+              - generic [ref=e264]: Find the best for you...
+              - img [ref=e265]
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - link [ref=e270] [cursor=pointer]:
+                  - /url: /compare_list
+                  - img [ref=e271]
+                - generic: "2"
+              - generic [ref=e275]:
+                - link [ref=e276] [cursor=pointer]:
+                  - /url: /wishlists
+                  - img [ref=e277]
+                - generic: "1"
+              - button [ref=e281] [cursor=pointer]:
+                - img [ref=e282]
+              - listitem [ref=e286] [cursor=pointer]:
+                - generic [ref=e287]:
+                  - link [ref=e288]:
+                    - /url: /cart
+                    - img [ref=e289]
+                  - generic: "1"
+          - navigation [ref=e293]:
+            - list [ref=e294]:
+              - listitem [ref=e295]:
+                - link "ALL JEWELLERY" [ref=e296] [cursor=pointer]:
+                  - /url: /jewellery
+                  - generic [ref=e297]: ALL JEWELLERY
+                  - img [ref=e298]
+              - listitem [ref=e300]:
+                - link "EARRINGS" [ref=e301] [cursor=pointer]:
+                  - /url: /jewellery/earrings
+                  - generic [ref=e302]: EARRINGS
+                  - img [ref=e303]
+              - listitem [ref=e305]:
+                - link "NOSEPINS" [ref=e306] [cursor=pointer]:
+                  - /url: /jewellery/nosepins
+                  - generic [ref=e307]: NOSEPINS
+                  - img [ref=e308]
+              - listitem [ref=e310]:
+                - link "GIFT CARDS" [ref=e311] [cursor=pointer]:
+                  - /url: /gifts
+                  - generic [ref=e312]: GIFT CARDS
+              - listitem [ref=e313]:
+                - link "RINGS" [ref=e314] [cursor=pointer]:
+                  - /url: /jewellery/rings
+                  - generic [ref=e315]: RINGS
+                  - img [ref=e316]
+              - listitem [ref=e318]:
+                - link "PENDANTS" [ref=e319] [cursor=pointer]:
+                  - /url: /jewellery/pendants
+                  - generic [ref=e320]: PENDANTS
+                  - img [ref=e321]
+              - listitem [ref=e323]:
+                - link "TRENDING" [ref=e324] [cursor=pointer]:
+                  - /url: /trending
+              - listitem [ref=e325]:
+                - link "MONTHLY PLANS" [ref=e326] [cursor=pointer]:
+                  - /url: https://dfe.sunnydiamonds.com/
+                  - generic [ref=e327]: MONTHLY PLANS
+              - listitem [ref=e328]:
+                - link "EDUCATION" [ref=e329] [cursor=pointer]:
+                  - /url: /education/loose-diamonds/4cs/cut
+                  - generic [ref=e330]: EDUCATION
+  - generic [ref=e334]:
+    - list [ref=e335]:
+      - listitem [ref=e336]:
+        - link "Home" [ref=e337] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e338]:
+        - text: /
+        - link "Cart" [ref=e339] [cursor=pointer]:
+          - /url: /cart
+      - listitem [ref=e340]: / Checkout
+    - generic [ref=e341]:
+      - generic [ref=e342]:
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - heading "Shipping Address" [level=3] [ref=e345]
+            - paragraph [ref=e346]: Provide your address for delivery.
+          - generic [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]:
+                - textbox "First Name*" [ref=e350]: sreejith
+                - generic: Please enter your first name.
+              - generic [ref=e351]:
+                - textbox "Last Name*" [ref=e352]: sree
+                - generic: Please enter your last name.
+              - generic [ref=e353]:
+                - textbox "Email Address*" [ref=e354]: sree123@gmail.com
+                - generic: Please use a valid email address.
+              - generic [ref=e355]:
+                - textbox "Phone Number*" [ref=e356]: "9988774459"
+                - generic: Please use a valid phone number.
+              - generic [ref=e357]:
+                - textbox "Address*" [ref=e358]: sreee
+                - generic: Please specify an address for shipping.
+              - generic [ref=e359]:
+                - textbox "Pin Code*" [ref=e360]: "686661"
+                - generic: Please specify a valid pin code.
+              - generic [ref=e361]:
+                - textbox "City*" [ref=e362]: ERNAKULAM
+                - generic: Please specify a valid city.
+              - generic [ref=e363]:
+                - textbox "State*" [ref=e364]: kerala
+                - generic: Please specify a valid state.
+              - generic [ref=e365]:
+                - textbox "Country*" [ref=e366]: india
+                - generic: Please specify a valid country.
+            - generic [ref=e368] [cursor=pointer]:
+              - checkbox "Use this address as my billing address" [checked] [ref=e369]
+              - text: Use this address as my billing address
+        - generic [ref=e370]:
+          - generic [ref=e371]:
+            - generic [ref=e372]:
+              - paragraph [ref=e373]: Coupon Code
+              - button "View coupons" [ref=e374] [cursor=pointer]
+            - generic [ref=e375]:
+              - generic [ref=e376]:
+                - textbox "Enter coupon code" [ref=e377]: INVALID999
+                - button "Apply" [ref=e378] [cursor=pointer]
+              - paragraph: This promocode is not a valid one, please check again.
+          - generic [ref=e379]:
+            - paragraph [ref=e381]: Gift Card Redeem
+            - generic [ref=e383]:
+              - textbox "Enter card number" [ref=e384]
+              - button "Apply" [ref=e385] [cursor=pointer]
+        - generic [ref=e386]:
+          - generic [ref=e387]:
+            - heading "Payment Method" [level=3] [ref=e388]
+            - paragraph [ref=e389]: Select a payment method for checkout.
+          - generic [ref=e391]:
+            - generic [ref=e393] [cursor=pointer]:
+              - generic [ref=e394]:
+                - img [ref=e396]
+                - generic [ref=e398]:
+                  - paragraph [ref=e399]: Cash on Delivery
+                  - paragraph [ref=e400]: Pay at your doorstep
+              - radio [ref=e401]
+            - generic [ref=e403] [cursor=pointer]:
+              - generic [ref=e404]:
+                - img [ref=e406]
+                - generic [ref=e408]:
+                  - paragraph [ref=e409]: Pay Online
+                  - paragraph [ref=e410]: Secure payments via Razorpay
+              - radio [ref=e411]
+      - generic [ref=e413]:
+        - generic [ref=e414]:
+          - heading "Order Summary" [level=3] [ref=e415]
+          - link "Edit Cart" [ref=e416] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e418]:
+          - img "Aminah Diamond Ring" [ref=e419]
+          - generic [ref=e420]:
+            - generic [ref=e421]:
+              - paragraph [ref=e422]: Aminah Diamond Ring
+              - button "×" [ref=e423] [cursor=pointer]
+            - paragraph [ref=e424]: "2180422448001"
+            - generic [ref=e425]:
+              - paragraph [ref=e426]: 1 X ₹30,094
+              - paragraph [ref=e427]: ₹ 30,094
+        - separator [ref=e428]
+        - generic [ref=e429]:
+          - generic [ref=e430]:
+            - paragraph [ref=e431]: Subtotal
+            - paragraph [ref=e432]: ₹ 30,094
+          - generic [ref=e433]:
+            - paragraph [ref=e434]: Coupon Code Discount
+            - paragraph [ref=e435]: ₹0
+          - generic [ref=e436]:
+            - paragraph [ref=e437]: Redeemed Amount
+            - paragraph [ref=e438]: ₹0
+          - generic [ref=e439]:
+            - paragraph [ref=e440]: Service Charges
+            - paragraph [ref=e441]: Free
+        - separator [ref=e442]
+        - generic [ref=e443]:
+          - paragraph [ref=e444]: Total
+          - paragraph [ref=e445]: ₹ 30,094
+        - button "Pay Now" [ref=e447] [cursor=pointer]
+  - contentinfo [ref=e448]:
+    - generic [ref=e449]:
+      - generic [ref=e450]:
+        - generic [ref=e451]:
+          - heading "Keep in touch" [level=6] [ref=e452]
+          - generic [ref=e453]: Updates and exclusives.
+        - generic [ref=e456]:
+          - combobox "Your email *" [ref=e457]
+          - button "Subscribe" [ref=e458] [cursor=pointer]:
+            - generic [ref=e459]: Subscribe
+      - generic [ref=e460]:
+        - generic [ref=e461]:
+          - heading "COMPANY" [level=3] [ref=e462]
+          - list [ref=e463]:
+            - listitem [ref=e464]:
+              - link "About Us" [ref=e465] [cursor=pointer]:
+                - /url: /about-us
+            - listitem [ref=e466]:
+              - link "News" [ref=e467] [cursor=pointer]:
+                - /url: /news
+            - listitem [ref=e468]:
+              - link "Blogs" [ref=e469] [cursor=pointer]:
+                - /url: https://sunnydiamonds.com/blog/
+            - listitem [ref=e470]:
+              - link "Careers" [ref=e471] [cursor=pointer]:
+                - /url: /careers
+            - listitem [ref=e472]:
+              - link "Locations" [ref=e473] [cursor=pointer]:
+                - /url: /locations
+        - generic [ref=e474]:
+          - heading "SUPPORT" [level=3] [ref=e475]
+          - list [ref=e476]:
+            - listitem [ref=e477]:
+              - link "Customer Service" [ref=e478] [cursor=pointer]:
+                - /url: /customer-service
+            - listitem [ref=e479]:
+              - link "FAQs" [ref=e480] [cursor=pointer]:
+                - /url: /faq
+        - generic [ref=e481]:
+          - heading "WHY SHOP WITH SUNNY" [level=3] [ref=e482]
+          - list [ref=e483]:
+            - listitem [ref=e484]:
+              - link "Internally Flawless Diamonds" [ref=e485] [cursor=pointer]:
+                - /url: /why-buy-from-us/internally-flawless-diamonds
+            - listitem [ref=e486]:
+              - link "100% Money Back" [ref=e487] [cursor=pointer]:
+                - /url: /why-buy-from-us/100-money-back
+            - listitem [ref=e488]:
+              - link "15 Day Return Policy" [ref=e489] [cursor=pointer]:
+                - /url: /why-buy-from-us/15day-return-policy
+            - listitem [ref=e490]:
+              - link "BIS Jewellery" [ref=e491] [cursor=pointer]:
+                - /url: /why-buy-from-us/hallmarked-jewellery
+            - listitem [ref=e492]:
+              - link "Certifications" [ref=e493] [cursor=pointer]:
+                - /url: /education/loose-diamonds/grading/diamond-certificate
+            - listitem [ref=e494]:
+              - link "Brand Assured Quality" [ref=e495] [cursor=pointer]:
+                - /url: /why-buy-from-us/brand-assured-quality
+            - listitem [ref=e496]:
+              - link "Fair Pricing" [ref=e497] [cursor=pointer]:
+                - /url: /fair-pricing
+            - listitem [ref=e498]:
+              - link "Cash on Delivery" [ref=e499] [cursor=pointer]:
+                - /url: /why-buy-from-us/cash-on-delivery
+            - listitem [ref=e500]:
+              - link "Free Shipping (Pan India)" [ref=e501] [cursor=pointer]:
+                - /url: /why-buy-from-us/free-shipping
+        - generic [ref=e502]:
+          - generic [ref=e503]:
+            - heading "SHOPPING & ORDERS" [level=3] [ref=e504]
+            - list [ref=e505]:
+              - listitem [ref=e506]:
+                - link "Cancellation Policy" [ref=e507] [cursor=pointer]:
+                  - /url: /cancellation-policy
+              - listitem [ref=e508]:
+                - link "Shipping Policy" [ref=e509] [cursor=pointer]:
+                  - /url: /shipping-policy
+              - listitem [ref=e510]:
+                - link "Cash on Delivery Policy" [ref=e511] [cursor=pointer]:
+                  - /url: /cash-on-delivery-policy
+          - generic [ref=e512]:
+            - heading "RETURNS & VALUE POLICIES" [level=3] [ref=e513]
+            - list [ref=e514]:
+              - listitem [ref=e515]:
+                - link "15 Days Return Policy" [ref=e516] [cursor=pointer]:
+                  - /url: /return-policy
+              - listitem [ref=e517]:
+                - link "100% Money Back Policy" [ref=e518] [cursor=pointer]:
+                  - /url: /money-back-policy
+              - listitem [ref=e519]:
+                - link "Exchange and Resizing Policy" [ref=e520] [cursor=pointer]:
+                  - /url: /exchange-and-resizing-policy
+              - listitem [ref=e521]:
+                - link "Old Gold Purchase Policy (Kerala Only)" [ref=e522] [cursor=pointer]:
+                  - /url: /old-gold-purchase-policy
+        - generic [ref=e523]:
+          - heading "CONTACT US" [level=3] [ref=e524]
+          - generic [ref=e525]:
+            - paragraph [ref=e526]: Sunny Diamonds Kochi 40/9134 B&C, Rajaji Rd Ernakulam, Kerala 682035
+            - link "customerservice@sunnydiamonds.com" [ref=e527] [cursor=pointer]:
+              - /url: mailto:customerservice@sunnydiamonds.com
+              - img [ref=e528]
+              - text: customerservice@sunnydiamonds.com
+            - link "+91 9744 355 555" [ref=e530] [cursor=pointer]:
+              - /url: tel:+919744355555
+              - img [ref=e531]
+              - text: +91 9744 355 555
+            - link "+91 9961 870 099" [ref=e533] [cursor=pointer]:
+              - /url: https://wa.me/919961870099
+              - img [ref=e534]
+              - text: +91 9961 870 099
+      - generic [ref=e536]:
+        - img "Payment methods" [ref=e538]
+        - generic [ref=e539]:
+          - link [ref=e540] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/sunny-diamonds
+            - img [ref=e542]
+          - link [ref=e544] [cursor=pointer]:
+            - /url: https://www.facebook.com/SunnyDiamonds.jewellery
+            - img [ref=e546]
+          - link [ref=e548] [cursor=pointer]:
+            - /url: https://www.instagram.com/sunnydiamondsofficial/
+            - img [ref=e550]
+          - link [ref=e554] [cursor=pointer]:
+            - /url: https://twitter.com/SunnyDiamond_4c
+            - img [ref=e556]
+          - link [ref=e558] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/sunnydiamondsads?reload=9
+            - img [ref=e560]
+          - link [ref=e562] [cursor=pointer]:
+            - /url: https://uk.trustpilot.com/review/sunnydiamonds.com
+            - img [ref=e564]
+          - link [ref=e566] [cursor=pointer]:
+            - /url: https://in.pinterest.com/sunnydiamonds0/
+            - img [ref=e568]
+      - generic [ref=e571]:
+        - generic [ref=e572]:
+          - link "Terms and Conditions" [ref=e573] [cursor=pointer]:
+            - /url: /terms-and-conditions
+          - link "Privacy Policy" [ref=e574] [cursor=pointer]:
+            - /url: /privacy-policy
+        - paragraph [ref=e575]: © 2026 Sunny Diamonds. All rights reserved.
+  - button [ref=e576] [cursor=pointer]:
+    - img [ref=e577]
+```
